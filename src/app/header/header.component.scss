@@ -1,0 +1,119 @@
+/*@import "./shared/variables";*/
+
+$mobile-only: "only screen and (max-width : 768px)";
+
+#header {
+  background-color: #b92b27;
+  color: #fff;
+  padding: 6px 0;
+  line-height: 18px;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 7px;
+  z-index: 1;
+  width: 100%;
+
+  @media #{$mobile-only} {
+    height: 50px;
+    border-radius: 0;
+    position: fixed;
+  }
+
+  a {
+    display: inline;
+  }
+}
+
+.home-link {
+  width: 50px;
+  height: 66px;
+}
+
+.logo {
+  width: 50px;
+  padding: 3px 8px 0;
+
+  @media #{$mobile-only} {
+    width: 45px;
+    padding: 0 0 0 10px;
+  }
+}
+
+h1 {
+  font-weight: bold;
+  display: inline-block;
+  vertical-align:middle;
+  margin: 0;
+  font-size: 16px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.name {
+  margin-right: 30px;
+  margin-bottom: 2px;
+
+  @media #{$mobile-only} {
+    display: none;
+  }
+}
+
+.header-text {
+  position: absolute;
+  width: inherit;
+  height: 20px;
+  left: 10px;
+  top: 25px;
+
+  @media #{$mobile-only} {
+    top: 22px;
+  }
+}
+
+.left {
+  position: absolute;
+  left: 60px;
+  font-size: 16px;
+
+  @media #{$mobile-only} {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.header-nav {
+  display: inline-block;
+
+  @media #{$mobile-only} {
+    float: right;
+    margin-right: 20px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      font-weight: bold;
+    };
+  }
+}
+
+.info {
+  position: absolute;
+  right: 20px;
+  font-size: 16px;
+
+  @media #{$mobile-only} {
+    display: none;
+  }
+
+  a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
