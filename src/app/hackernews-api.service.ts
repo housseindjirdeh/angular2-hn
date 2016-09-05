@@ -3,10 +3,6 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-export interface ItemID {
-  id: number;
-}
-
 @Injectable()
 export class HackerNewsAPIService {
 	baseUrl: string;
@@ -15,8 +11,13 @@ export class HackerNewsAPIService {
   	this.baseUrl = 'https://hacker-news.firebaseio.com/v0';
   }
 
-	fetchStories(): Observable<ItemID[]> {
+	fetchStories(): Observable<any> {
 		return this.http.get(`${this.baseUrl}/topstories.json`)
+                    .map(response => response.json());
+	}
+
+	fetchItem(id: number): Observable<any> {
+		return this.http.get(`${this.baseUrl}/item/${id}.json`)
                     .map(response => response.json());
 	}
 }

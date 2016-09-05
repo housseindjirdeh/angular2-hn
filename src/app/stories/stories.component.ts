@@ -3,10 +3,6 @@ import { Observable } from 'rxjs/Observable';
 
 import { HackerNewsAPIService } from '../hackernews-api.service';
 
-export interface ItemID {
-  id: number;
-}
-
 @Component({
   selector: 'app-stories',
   templateUrl: './stories.component.html',
@@ -14,14 +10,14 @@ export interface ItemID {
 })
 
 export class StoriesComponent implements OnInit {
-  items$;
+  items;
 
   constructor(private _hackerNewsAPIService: HackerNewsAPIService) {}
 
   ngOnInit() {
   	this._hackerNewsAPIService.fetchStories()
                    	.subscribe(
-                    	items => this.items$ = items,
+                    	items => this.items = items,
                     	error => console.log('Error fetching stories'));
   }
 }

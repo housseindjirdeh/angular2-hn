@@ -1,1 +1,69 @@
-<p>Story #{{itemID}}<p>
+<div class="loading-section" *ngIf="!item">
+  <div class="loader">
+    Loading...
+  </div>
+</div>
+<div *ngIf="item">
+	<div class="item-laptop">
+	  <p *ngIf="item.url"> 
+	    <a class="title" href="{{item.url}}">
+	      {{item.title}}
+	    </a>
+	    <span class="domain">{{item.url}}</span>
+	  </p>
+	  <p *ngIf="!item.url">
+	    <a class="title" href="">
+	      {{item.title}}
+	    </a>
+	  </p>
+	  <div class="subtext-laptop">
+	    <span *ngIf="item.type !== 'job'">
+	      {{item.score}} points by 
+	      <a href="">{{item.by}}</a>
+	    </span> 
+	    <span [class.item-details]="item.type !== 'job'">
+	      {{ item.time }}
+	      <span *ngIf="item.type !== 'job'"> |
+	        <a href="">
+	          <span *ngIf="item.descendants !== 0">
+	            {{item.descendants}}
+	            <span *ngIf="item.descendants === 1">comment</span>
+	            <span *ngIf="item.descendants > 1">comments</span>
+	          </span>
+	          <span *ngIf="item.descendants === 0">discuss</span>
+	        </a>
+	      </span>
+	    </span>
+	  </div>
+	</div>
+  <div class="item-mobile">
+    <p *ngIf="item.url"> 
+      <a class="title" href="{{item.url}}">
+        {{item.title}}
+      </a>
+      <span class="domain">{{item.url}}</span>
+    </p>
+    <p *ngIf="!item.url">
+      <a class="title" href="">
+        {{item.title}}
+      </a>
+    </p>
+    <div class="subtext-palm">
+      <div class="details" *ngIf="item.type !== 'job'">
+        <span class="name"> <a href="">{{item.by}}</a></span>
+        <span class="right">{{item.score}} ★</span>
+      </div>
+      <div class="details">
+      {{ item.time }}
+      <a href="" class="comment-number" *ngIf="item.type !== 'job'"> • 
+        <span *ngIf="item.descendants !== 0">
+          {{item.descendants}}
+          <span *ngIf="item.descendants === 1">comment</span>
+          <span *ngIf="item.descendants > 1">comments</span>
+        </span>
+        <span *ngIf="item.descendants === 0">discuss</span>
+      </a>
+      </div>
+    </div>
+  </div>
+</div>
