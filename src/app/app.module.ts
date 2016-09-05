@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MomentModule } from 'angular2-moment';
 
+import { routing } from './app.routes';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { StoriesComponent } from './stories/stories.component';
@@ -26,7 +28,8 @@ import { DomainPipe } from './domain.pipe';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MomentModule
+    MomentModule,
+    routing
   ],
   providers: [HackerNewsAPIService],
   bootstrap: [AppComponent]

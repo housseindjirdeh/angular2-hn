@@ -1,14 +1,18 @@
 <div class="main-content">
-  <ol [class.list-margin]="storiesType !== 'jobs'">
-    <li *ngFor="let item of items | slice:0:30" class="post">
+  <p class="job-header" *ngIf="storiesType === 'jobs'">
+    These are jobs at startups that were funded by Y Combinator. 
+    You can also get a job at a YC startup through <a href="https://triplebyte.com/?ref=yc_jobs">Triplebyte</a>.
+    </p>
+  <ol [class.list-margin]="storiesType !== 'jobs'" start="{{ indexFrom + 1 }}">
+    <li *ngFor="let item of items | slice:indexFrom:indexFrom + 30" class="post">
       <item class="item-block" itemID="{{ item }}"></item>
     </li>
   </ol>
   <div class="nav">
-    <a href="" class="prev">
+    <a routerLink="/{{ storiesType }}/{{ pageNum - 1 }}" *ngIf="indexFrom > 0" (click)="scrollTop()" class="prev">
       ‹ Prev
     </a>
-    <a href="" class="more">
+    <a routerLink="/{{ storiesType }}/{{ pageNum + 1 }}" *ngIf="items?.length > indexFrom + 30" (click)="scrollTop()" class="more">
       More ›
     </a>
   <div>

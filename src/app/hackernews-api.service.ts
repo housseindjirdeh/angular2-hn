@@ -11,13 +11,13 @@ export class HackerNewsAPIService {
   	this.baseUrl = 'https://hacker-news.firebaseio.com/v0';
   }
 
-	fetchStories(): Observable<any> {
-		return this.http.get(`${this.baseUrl}/topstories.json`)
-                    .map(response => response.json());
+	fetchStories(storyType: string): Observable<any> {
+		return this.http.get(`${this.baseUrl}/${storyType}.json`)
+	                .map(response => response.json());
 	}
 
 	fetchItem(id: number): Observable<any> {
 		return this.http.get(`${this.baseUrl}/item/${id}.json`)
-                    .map(response => response.json());
+	                .map(response => response.json());
 	}
 }

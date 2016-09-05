@@ -12,4 +12,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  scrollTop() {
+    window.scrollTo(0, 0);
+  }
 }
