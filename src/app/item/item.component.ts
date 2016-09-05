@@ -18,5 +18,4 @@ export class ItemComponent implements OnInit {
       this.item = data;
     }, error => console.log('Could not load item' + this.itemID));
   }
-
 }

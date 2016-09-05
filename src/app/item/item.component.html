@@ -9,7 +9,7 @@
 	    <a class="title" href="{{item.url}}">
 	      {{item.title}}
 	    </a>
-	    <span class="domain">{{item.url}}</span>
+	    <span class="domain">{{item.url | domain}}</span>
 	  </p>
 	  <p *ngIf="!item.url">
 	    <a class="title" href="">
@@ -22,7 +22,7 @@
 	      <a href="">{{item.by}}</a>
 	    </span> 
 	    <span [class.item-details]="item.type !== 'job'">
-	      {{ item.time }}
+	      {{ (item.time | amFromUnix) | amTimeAgo }}
 	      <span *ngIf="item.type !== 'job'"> |
 	        <a href="">
 	          <span *ngIf="item.descendants !== 0">
@@ -54,7 +54,7 @@
         <span class="right">{{item.score}} ★</span>
       </div>
       <div class="details">
-      {{ item.time }}
+      {{ (item.time | amFromUnix) | amTimeAgo }}
       <a href="" class="comment-number" *ngIf="item.type !== 'job'"> • 
         <span *ngIf="item.descendants !== 0">
           {{item.descendants}}
