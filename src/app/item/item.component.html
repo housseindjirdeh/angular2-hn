@@ -1,69 +1,69 @@
 <div class="loading-section" *ngIf="!item">
-  <div class="loader">
-    Loading...
+    <div class="loader">
+      Loading...
+    </div>
   </div>
-</div>
-<div *ngIf="item">
-	<div class="item-laptop">
-	  <p *ngIf="item.url"> 
-	    <a class="title" href="{{item.url}}">
-	      {{item.title}}
-	    </a>
-	    <span class="domain">{{item.url | domain}}</span>
-	  </p>
-	  <p *ngIf="!item.url">
-	    <a class="title" href="">
-	      {{item.title}}
-	    </a>
-	  </p>
-	  <div class="subtext-laptop">
-	    <span *ngIf="item.type !== 'job'">
-	      {{item.score}} points by 
-	      <a href="">{{item.by}}</a>
-	    </span> 
-	    <span [class.item-details]="item.type !== 'job'">
-	      {{ (item.time | amFromUnix) | amTimeAgo }}
-	      <span *ngIf="item.type !== 'job'"> |
-	        <a href="">
-	          <span *ngIf="item.descendants !== 0">
-	            {{item.descendants}}
-	            <span *ngIf="item.descendants === 1">comment</span>
-	            <span *ngIf="item.descendants > 1">comments</span>
-	          </span>
-	          <span *ngIf="item.descendants === 0">discuss</span>
-	        </a>
-	      </span>
-	    </span>
-	  </div>
-	</div>
-  <div class="item-mobile">
-    <p *ngIf="item.url"> 
-      <a class="title" href="{{item.url}}">
-        {{item.title}}
-      </a>
-      <span class="domain">{{item.url}}</span>
-    </p>
-    <p *ngIf="!item.url">
-      <a class="title" href="">
-        {{item.title}}
-      </a>
-    </p>
-    <div class="subtext-palm">
-      <div class="details" *ngIf="item.type !== 'job'">
-        <span class="name"> <a href="">{{item.by}}</a></span>
-        <span class="right">{{item.score}} ★</span>
-      </div>
-      <div class="details">
-      {{ (item.time | amFromUnix) | amTimeAgo }}
-      <a href="" class="comment-number" *ngIf="item.type !== 'job'"> • 
-        <span *ngIf="item.descendants !== 0">
-          {{item.descendants}}
-          <span *ngIf="item.descendants === 1">comment</span>
-          <span *ngIf="item.descendants > 1">comments</span>
+  <div *ngIf="item">
+    <div class="item-laptop">
+      <p *ngIf="item.url"> 
+        <a class="title" href="{{item.url}}">
+          {{item.title}}
+        </a>
+        <span class="domain">{{item.url | domain}}</span>
+      </p>
+      <p *ngIf="!item.url">
+        <a class="title" [routerLink]="['/item', item.id]" routerLinkActive="active">
+          {{item.title}}
+        </a>
+      </p>
+      <div class="subtext-laptop">
+        <span *ngIf="item.type !== 'job'">
+          {{item.score}} points by 
+          <a [routerLink]="['/user', item.by]" routerLinkActive="active">{{item.by}}</a>
+        </span> 
+        <span [class.item-details]="item.type !== 'job'">
+          {{ (item.time | amFromUnix) | amTimeAgo }}
+          <span *ngIf="item.type !== 'job'"> |
+            <a [routerLink]="['/item', item.id]" routerLinkActive="active">
+              <span *ngIf="item.descendants !== 0">
+                {{item.descendants}}
+                <span *ngIf="item.descendants === 1">comment</span>
+                <span *ngIf="item.descendants > 1">comments</span>
+              </span>
+              <span *ngIf="item.descendants === 0">discuss</span>
+            </a>
+          </span>
         </span>
-        <span *ngIf="item.descendants === 0">discuss</span>
-      </a>
+      </div>
+    </div>
+    <div class="item-mobile">
+      <p *ngIf="item.url"> 
+        <a class="title" href="{{item.url}}">
+          {{item.title}}
+        </a>
+        <span class="domain">{{item.url | domain}}</span>
+      </p>
+      <p *ngIf="!item.url">
+        <a class="title" [routerLink]="['/item', item.id]" routerLinkActive="active">
+          {{item.title}}
+        </a>
+      </p>
+      <div class="subtext-palm">
+        <div class="details" *ngIf="item.type !== 'job'">
+          <span class="name"> <a [routerLink]="['/user', item.by]" routerLinkActive="active">{{item.by}}</a></span>
+          <span class="right">{{item.score}} ★</span>
+        </div>
+        <div class="details">
+        {{ (item.time | amFromUnix) | amTimeAgo }}
+        <a [routerLink]="['/item', item.id]" routerLinkActive="active" class="comment-number" *ngIf="item.type !== 'job'"> • 
+          <span *ngIf="item.descendants !== 0">
+            {{item.descendants}}
+            <span *ngIf="item.descendants === 1">comment</span>
+            <span *ngIf="item.descendants > 1">comments</span>
+          </span>
+          <span *ngIf="item.descendants === 0">discuss</span>
+        </a>
+        </div>
       </div>
     </div>
   </div>
-</div>

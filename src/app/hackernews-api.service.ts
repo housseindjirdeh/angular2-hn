@@ -13,11 +13,16 @@ export class HackerNewsAPIService {
 
 	fetchStories(storyType: string): Observable<any> {
 		return this.http.get(`${this.baseUrl}/${storyType}.json`)
-	                .map(response => response.json());
+	                	.map(response => response.json());
 	}
 
 	fetchItem(id: number): Observable<any> {
 		return this.http.get(`${this.baseUrl}/item/${id}.json`)
-	                .map(response => response.json());
+	                	.map(response => response.json());
 	}
+
+	fetchUser(id: string) {
+    return this.http.get(`${this.baseUrl}/user/${id}.json`)
+    								.map(response => response.json());
+ 	}
 }

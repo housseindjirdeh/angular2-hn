@@ -14,6 +14,7 @@ import { ItemComponent } from './item/item.component';
 
 import { HackerNewsAPIService } from './hackernews-api.service';
 import { DomainPipe } from './domain.pipe';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DomainPipe } from './domain.pipe';
     StoriesComponent,
     FooterComponent,
     ItemComponent,
-    DomainPipe
+    DomainPipe,
+    UserComponent
   ],
   imports: [
     BrowserModule,
