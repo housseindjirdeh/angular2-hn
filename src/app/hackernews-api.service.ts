@@ -22,7 +22,7 @@ export class HackerNewsAPIService {
 	}
 
 	fetchUser(id: string) {
-    return this.http.get(`${this.baseUrl}/user/${id}.json`)
-    								.map(response => response.json());
+    	return this.http.get(`${this.baseUrl}/user/${id}.json`)
+    					.map(response => response.json());
  	}
 }

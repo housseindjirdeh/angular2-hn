@@ -1,0 +1,27 @@
+<div class="loading-section" *ngIf="!comment">
+  <div class="loader">
+    Loading...
+  </div>
+</div>
+<div *ngIf="comment">
+  <div *ngIf="!comment.deleted">
+    <div class="meta" [class.meta-collapse]="collapse">
+      <span class="collapse" (click)="collapse = !collapse">[{{collapse ? '+' : '-'}}]</span> 
+      <a [routerLink]="['/user', comment.by]" routerLinkActive="active">{{comment.by}}</a>
+      <span class="time">{{ (comment.time | amFromUnix) | amTimeAgo }}</span>
+    </div>
+    <div class="comment-tree">
+      <div [hidden]="collapse">
+        <p class="comment-text" [innerHTML]="comment.text"></p>
+        <div class="subtree" *ngFor="let kidId of comment.kids">
+          <app-comment commentID="{{ kidId }}"></app-comment>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="comment.deleted">
+    <div class="deleted-meta">
+      <span class="collapse">[deleted]</span> | Comment Deleted
+    </div>
+  </div>
+</div>

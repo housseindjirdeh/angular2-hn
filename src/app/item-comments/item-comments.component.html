@@ -1,0 +1,47 @@
+  <div *ngIf="item" class="item">
+    <div class="mobile item-header">
+      <p class="title-block">
+        <span class="back-button" (click)="goBack()"></span>
+        <a *ngIf="item.url" class="title" href="{{item.url}}">
+          {{item.title}}
+        </a>
+        <a *ngIf="!item.url" class="title" [routerLink]="['/item', item.id]" routerLinkActive="active">
+          {{item.title}}
+        </a>
+      </p>
+    </div>
+    <div class="laptop" [class.item-header]="item.descendants !== 0 && item.type !== 'job'" [class.head-margin]="item.text">
+      <p *ngIf="item.url">
+        <a class="title" href="{{item.url}}">
+        {{item.title}}
+        </a>
+        <span class="domain">{{item.url | domain}}</span>
+      </p>
+      <p *ngIf="!item.url">
+        <a class="title" [routerLink]="['/item', item.id]" routerLinkActive="active">
+        {{item.title}}
+        </a>
+      </p>
+      <div class="subtext">
+        <span *ngIf="item.type !== 'job'">
+        {{item.score}} points by 
+          <a [routerLink]="['/user', item.by]" routerLinkActive="active">{{item.by}}</a>
+        </span> 
+        <span [class.item-details]="item.type !== 'job'">
+          {{ (item.time | amFromUnix) | amTimeAgo }}
+          <span *ngIf="item.type !== 'job'"> |
+            <a [routerLink]="['/item', item.id]" routerLinkActive="active">
+              <span *ngIf="item.descendants !== 0">
+                {{item.descendants}}
+                <span *ngIf="item.descendants === 1">comment</span>
+                <span *ngIf="item.descendants > 1">comments</span>
+              </span>
+              <span *ngIf="item.descendants === 0">discuss</span>
+            </a>
+          </span>
+        </span> 
+      </div>
+    </div>
+    <p class="subject" [innerHTML]="item.text"></p>
+    <app-comment-tree itemKids="{{ item.kids }}" itemCount="{{ item.descendants }}"></app-comment-tree>
+  </div>

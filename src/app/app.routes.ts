@@ -1,6 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import { StoriesComponent } from './stories/stories.component';
+import { ItemCommentsComponent } from './item-comments/item-comments.component';
 import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: 'show/:page', component: StoriesComponent },
   { path: 'ask/:page', component: StoriesComponent },
   { path: 'jobs/:page', component: StoriesComponent },
+  { path: 'item/:id', component: ItemCommentsComponent },
   { path: 'user/:id', component: UserComponent }
 ];
 

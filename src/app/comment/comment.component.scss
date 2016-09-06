@@ -1,0 +1,169 @@
+$mobile-only: "only screen and (max-width : 768px)";
+$laptop-only: "only screen and (min-width : 769px)";
+$tablet-only: "only screen and (max-width: 1024px)";
+
+:host > > > {
+  a {
+    color: #b92b27;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  pre {
+    white-space: pre-wrap;
+  }
+}
+
+.meta {
+  font-size: 13px;
+  color: #696969;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  a {
+    color: #b92b27;
+  }
+  .time {
+    padding-left: 5px;
+  }
+}
+
+@media #{$mobile-only} {
+  .meta {
+    font-size: 14px;
+    margin-bottom: 10px;
+    .time {
+      padding: 0;
+      float: right;
+    }
+  }
+}
+
+.meta-collapse {
+  margin-bottom: 20px;
+}
+
+.deleted-meta {
+  font-size: 12px;
+  color: #696969;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin: 30px 0;
+  a {
+    color: #b92b27;
+    text-decoration: none;
+  }
+}
+
+.collapse {
+  font-size: 13px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.comment-tree {
+  margin-left: 24px;
+}
+
+@media #{$tablet-only} {
+  .comment-tree {
+    margin-left: 10px;
+  }
+}
+
+.comment-text {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  line-height: 1.5em;
+}
+
+.subtree {
+  margin-left: 22px;
+}
+
+@media #{$mobile-only} {
+  .subtree {
+    margin-left: 5px;
+  }
+}
+
+.loading-section {
+  height: 70px;
+  margin: 40px 0 40px 40px;
+}
+
+@media #{$mobile-only} {
+  .loading-section {
+    height: 50px;
+    margin: 0 0 30px 40px;
+  }
+}
+
+.loader {
+  &:before, &:after {
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: load7 1.8s infinite ease-in-out;
+    animation: load7 1.8s infinite ease-in-out;
+  }
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+  color: #B92B27;
+  font-size: 10px;
+  margin: 20px;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+  &:before {
+    left: -3.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  &:after {
+    left: 3.5em;
+  }
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+  }
+}
+
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
+
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
