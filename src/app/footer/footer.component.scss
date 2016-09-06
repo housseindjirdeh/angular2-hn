@@ -11,10 +11,10 @@ $mobile-only: "only screen and (max-width : 768px)";
   	color: #b92b27;
   	font-weight: bold;
   	text-decoration: none;
-  }
 
-  &:hover {
-  	text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   @media #{$mobile-only} {
