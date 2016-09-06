@@ -1,31 +1,45 @@
-# Angular2Hn
+<img alt="Angular 2 HN" title="Angular 2 HN" src="http://i.imgur.com/92Lll7T.png" width="500">
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.11-webpack.8.
+**A Hacker News client built with [Angular 2](https://angular.io/), [RxJS](http://reactivex.io/) and [Webpack](https://webpack.github.io/) using it's [Firebase API](https://github.com/HackerNews/API).**
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+[Live Version](https://angular2-hn.firebaseapp.com)
 
-## Code scaffolding
+## Mobile Preview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+<p align="center">
+  <img src = "http://i.imgur.com/46BnTDt.gif">
+</p>
 
-## Build
+## Laptop Preview
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+<p align="center">
+  <img src = "http://i.imgur.com/6QquRtl.gif">
+</p>
 
-## Running unit tests
+## Features
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ + Supports display of:
+  + [Stories](https://angular2-hn.firebaseapp.com/item/12398451)
+  + [Jobs](https://angular2-hn.firebaseapp.com/item/12366966)
+  + [User profiles](https://angular2-hn.firebaseapp.com/user/dhouston)
+ + Completely responsive UI that provides a native feel regardless of which device you use
 
-## Running end-to-end tests
+## Areas of improvement
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). 
-Before running the tests make sure you are serving the app via `ng serve`.
+ - Comment requests stagger and take a while with a large number of comments (>200). This needs to be sped up considerably
+ - Support for polls
 
-## Deploying to Github Pages
+Feel free to send me feedback on [twitter](https://twitter.com/hdjirdeh) or [file an issue](https://github.com/hdjirdeh/angular2-hn/issues/new)!
 
-Run `ng github-pages:deploy` to deploy to Github Pages.
+## Build process
 
-## Further help
+ - Clone or download the repo
+ - If you don't have Angular CLI installed: `npm install -g angular-cli@webpack`
+ - `ng init`
+ - Input `n` for each file to not overwrite any file changes
+ - `ng serve`
+ - `ng serve --prod` will kick off a production build with uglifying and tree-shaking
 
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This will kick off the server at `http://localhost:4200/`. Any changes you do to the source files should automatically reload the app.
+
+Click [here](https://cli.angular.io/) to see a full list of what you can do with Angular CLI.
