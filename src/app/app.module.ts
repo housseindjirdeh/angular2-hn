@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MomentModule } from 'angular2-moment';
+import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 
 import { routing } from './app.routes';
 
@@ -37,6 +38,7 @@ import { CommentComponent } from './comment/comment.component';
     FormsModule,
     HttpModule,
     MomentModule,
+    InfiniteScrollModule,
     routing
   ],
   providers: [HackerNewsAPIService],

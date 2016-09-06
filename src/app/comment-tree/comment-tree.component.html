@@ -1,8 +1,10 @@
+<div infinite-scroll
+    [infiniteScrollDistance]="5"
+    [infiniteScrollThrottle]="500"
+    (scrolled)="loadMore()">
 <ul class="comment-list">
   <li *ngFor="let itemID of itemKids | slice:0:indexFrom">
     <app-comment commentID="{{ itemID }}"></app-comment>
   </li>
-  <div *ngIf="indexFrom < itemKids.length" class="button-block">
-    <a (click)="loadMore()" class="more-button">More</a>
-  </div>
 </ul>
+</div>
