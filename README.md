@@ -13,7 +13,7 @@
 ## Laptop Preview
 
 <p align="center">
-  <img src = "http://i.imgur.com/6QquRtl.gif">
+  <img src = "http://i.imgur.com/UROMS9j.gif">
 </p>
 
 ## Features
