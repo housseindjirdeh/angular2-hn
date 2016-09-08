@@ -10,7 +10,7 @@ export class HackerNewsAPIService {
 
   constructor(private http: Http) {
   	this.officialUrl = 'https://hacker-news.firebaseio.com/v0';
-  	this.subUrl = 'http://node-hnapi.herokuapp.com';
+  	this.subUrl = 'https://node-hnapi.herokuapp.com';
   }
 
 	fetchStories(storyType: string): Observable<any> {
