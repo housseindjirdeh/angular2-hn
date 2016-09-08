@@ -132,7 +132,8 @@ a {
 @media #{$mobile-only} {
   .loading-section {
     height: 50px;
-    margin: 0 0 30px 40px;
+    margin: 80px 0 30px 40px;
+    position: absolute;
   }
 }
 

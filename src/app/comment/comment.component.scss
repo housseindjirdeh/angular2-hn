@@ -2,7 +2,7 @@ $mobile-only: "only screen and (max-width : 768px)";
 $laptop-only: "only screen and (min-width : 769px)";
 $tablet-only: "only screen and (max-width: 1024px)";
 
-:host > > > {
+:host >>> {
   a {
     color: #b92b27;
     font-weight: bold;
@@ -10,9 +10,6 @@ $tablet-only: "only screen and (max-width: 1024px)";
     &:hover {
       text-decoration: underline;
     }
-  }
-  pre {
-    white-space: pre-wrap;
   }
 }
 
