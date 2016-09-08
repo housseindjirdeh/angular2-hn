@@ -1,7 +1,7 @@
 <div *ngIf="!comment.deleted">
   <div class="meta" [class.meta-collapse]="collapse">
     <span class="collapse" (click)="collapse = !collapse">[{{collapse ? '+' : '-'}}]</span> 
-    <a [routerLink]="['/user', comment.by]" routerLinkActive="active">{{comment.user}}</a>
+    <a [routerLink]="['/user', comment.user]" routerLinkActive="active">{{comment.user}}</a>
     <span class="time">{{comment.time_ago}}</span>
   </div>
   <div class="comment-tree">
