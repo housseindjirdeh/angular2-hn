@@ -1,6 +1,6 @@
 <img alt="Angular 2 HN" title="Angular 2 HN" src="http://i.imgur.com/92Lll7T.png" width="500">
 
-**A Hacker News client built with [Angular 2](https://angular.io/), [RxJS](http://reactivex.io/) and [Webpack](https://webpack.github.io/) using it's [Firebase API](https://github.com/HackerNews/API).**
+**A Hacker News client built with [Angular CLI](https://cli.angular.io/), [RxJS](http://reactivex.io/) and [Webpack](https://webpack.github.io/) using it's [Firebase API](https://github.com/HackerNews/API).**
 
 [Live Version](https://angular2-hn.firebaseapp.com)
 
@@ -13,7 +13,7 @@
 ## Laptop Preview
 
 <p align="center">
-  <img src = "http://i.imgur.com/6QquRtl.gif">
+  <img src = "http://i.imgur.com/UROMS9j.gif">
 </p>
 
 ## Features
@@ -27,7 +27,7 @@
 ## Areas of improvement
 
  - Support for polls
- - Fix post loading to not load individually and speed up requests
+ - Fix post loading to not load individually, speed up it's requests
 
 Feel free to send me feedback on [twitter](https://twitter.com/hdjirdeh) or [file an issue](https://github.com/hdjirdeh/angular2-hn/issues/new)!
 
