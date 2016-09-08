@@ -22,7 +22,7 @@ export class ItemCommentsComponent implements OnInit {
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       let itemID = +params['id'];
-      this._hackerNewsAPIService.fetchItem(itemID).subscribe(data => {
+      this._hackerNewsAPIService.fetchComments(itemID).subscribe(data => {
         this.item = data;
       }, error => console.log('Could not load item' + itemID));
     });

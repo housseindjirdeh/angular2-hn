@@ -26,8 +26,8 @@
 
 ## Areas of improvement
 
- - Comment requests stagger and take a while with a large number of comments (>200). This needs to be sped up considerably
  - Support for polls
+ - Fix post loading to not load individually and speed up requests
 
 Feel free to send me feedback on [twitter](https://twitter.com/hdjirdeh) or [file an issue](https://github.com/hdjirdeh/angular2-hn/issues/new)!
 

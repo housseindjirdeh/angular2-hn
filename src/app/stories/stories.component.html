@@ -3,7 +3,7 @@
     These are jobs at startups that were funded by Y Combinator. 
     You can also get a job at a YC startup through <a href="https://triplebyte.com/?ref=yc_jobs">Triplebyte</a>.
     </p>
-  <ol [class.list-margin]="storiesType !== 'jobs'" start="{{ indexFrom + 1 }}">
+  <ol *ngIf="storiesType !== 'new'" [class.list-margin]="storiesType !== 'jobs'" start="{{ indexFrom + 1 }}">
     <li *ngFor="let item of items | slice:indexFrom:indexFrom + 30" class="post">
       <item class="item-block" itemID="{{ item }}"></item>
     </li>

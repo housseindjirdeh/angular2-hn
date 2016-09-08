@@ -8,7 +8,7 @@
   <div class="main-details">
     <span class="name">{{ user.id }}</span>
     <span class="right">{{ user.karma }} ★</span>
-    <p class="age">Created {{ (user.created | amFromUnix) | amTimeAgo }}</p>
+    <p class="age">Created {{ user.created }}</p>
   </div>
   <div class="other-details" *ngIf="user.about">
     <p [innerHTML]="user.about"></p>
