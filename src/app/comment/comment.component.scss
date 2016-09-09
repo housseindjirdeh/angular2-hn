@@ -71,7 +71,7 @@ $tablet-only: "only screen and (max-width: 1024px)";
 
 @media #{$tablet-only} {
   .comment-tree {
-    margin-left: 10px;
+    margin-left: 8px;
   }
 }
 
@@ -85,11 +85,6 @@ $tablet-only: "only screen and (max-width: 1024px)";
 
 .subtree {
   margin-left: 0;
+  padding: 0;
   list-style-type: none;
-}
-
-@media #{$mobile-only} {
-  .subtree {
-    padding-left: 8px;
-  }
 }

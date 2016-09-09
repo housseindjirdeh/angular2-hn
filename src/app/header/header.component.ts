@@ -10,9 +10,10 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
-  scrollTop() {
+  navClick(nav) {
     window.scrollTo(0, 0);
   }
 }

@@ -162,20 +162,13 @@ a {
 }
 
 .loading-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
+    height: 70px;
+    margin: 50px 0 40px 40px;
 
   @media #{$mobile-only} {
     display: block;
     position: relative;
-    margin-top: 45vh;
+    margin-top: 45vh 0;
   }
 }
 

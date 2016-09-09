@@ -7,13 +7,11 @@ $mobile-only: "only screen and (max-width : 768px)";
   line-height: 18px;
   vertical-align: middle;
   position: relative;
-  border-radius: 7px;
   z-index: 1;
   width: 100%;
 
   @media #{$mobile-only} {
     height: 50px;
-    border-radius: 0;
     position: fixed;
     top: 0;
   }

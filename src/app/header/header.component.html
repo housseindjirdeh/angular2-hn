@@ -1,27 +1,27 @@
 <header>
     <div id="header">
-      <a class="home-link" routerLink="/news/1" routerLinkActive="active" (click)="scrollTop()">
+      <a class="home-link" routerLink="/news/1" routerLinkActive="active" (click)="navClick(news)">
         <img class="logo" src="https://houssein.me/assets/images/angular2-hn.png">
       </a>
       <div class="header-text">
         <div class="left">
           <h1 class="name">
-            <a routerLink="/news/1" routerLinkActive="active" (click)="scrollTop()" class="app-title">Angular 2 HN</a>
+            <a routerLink="/news/1" routerLinkActive="active" (click)="navClick(news)" class="app-title">Angular 2 HN</a>
           </h1>
           <span class="header-nav">
-            <a routerLink="/newest/1" routerLinkActive="active" (click)="scrollTop()">new</a>
+            <a routerLink="/newest/1" routerLinkActive="active" (click)="navClick(newest)">new</a>
             <span class="divider">
               |
             </span>
-            <a routerLink="/show/1" routerLinkActive="active" (click)="scrollTop()">show</a>
+            <a routerLink="/show/1" routerLinkActive="active" (click)="navClick(show)">show</a>
             <span class="divider">
               |
             </span>
-            <a routerLink="/ask/1" routerLinkActive="active" (click)="scrollTop()">ask</a>
+            <a routerLink="/ask/1" routerLinkActive="active" (click)="navClick(ask)">ask</a>
             <span class="divider">
               |
             </span>
-            <a routerLink="/jobs/1" routerLinkActive="active" (click)="scrollTop()">jobs</a>
+            <a routerLink="/jobs/1" routerLinkActive="active" (click)="navClick(jobs)">jobs</a>
           </span>
         </div>
         <div class="info">

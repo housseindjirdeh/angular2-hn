@@ -9,16 +9,16 @@
     </div>
   </div>
   <div *ngIf="items">
-    <ol *ngIf="storiesType !== 'new'" [class.list-margin]="storiesType !== 'jobs'" start="{{ ((pageNum - 1) * 30) + 1 }}">
+    <ol *ngIf="storiesType !== 'new'" [class.list-margin]="storiesType !== 'jobs'" start="{{ listStart }}">
       <li *ngFor="let item of items" class="post">
         <item class="item-block" [item]="item"></item>
       </li>
     </ol>
     <div class="nav">
-      <a [routerLink]="['/' + storiesType, pageNum - 1]" routerLinkActive="active" (click)="scrollTop()" class="prev">
+      <a *ngIf="listStart !== 1" [routerLink]="['/' + storiesType, pageNum - 1]" routerLinkActive="active" (click)="changePage(pageNum - 1)" class="prev">
         ‹ Prev
       </a>
-      <a [routerLink]="['/' + storiesType, pageNum + 1]" routerLinkActive="active" (click)="scrollTop()" class="more">
+      <a *ngIf="items.length === 30" [routerLink]="['/' + storiesType, pageNum + 1]" routerLinkActive="active" (click)="changePage(pageNum + 1)" class="more">
         More ›
       </a>
     <div>

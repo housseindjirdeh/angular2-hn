@@ -15,6 +15,7 @@ export class StoriesComponent implements OnInit {
   items;
   storiesType: string;
   pageNum: number;
+  listStart: number;
 
   constructor(
     private _hackerNewsAPIService: HackerNewsAPIService, 
@@ -44,10 +45,20 @@ export class StoriesComponent implements OnInit {
     this._hackerNewsAPIService.fetchStories(this.storiesType, this.pageNum)
                               .subscribe(
                                 items => this.items = items,
-                                error => console.log('Error fetching new stories'));
+                                error => console.log('Error fetching' + this.storiesType + 'stories'),
+                                () => this.listStart = ((this.pageNum - 1) * 30) + 1);
   }
 
-  scrollTop() {
+  changePage(pageNum) {
+    this._hackerNewsAPIService.fetchStories(this.storiesType, pageNum)
+                              .subscribe(
+                                items => this.items = items,
+                                error => console.log('Error fetching' + this.storiesType + 'stories'),
+                                () => this.changeListStartAndScroll(pageNum));
+  }
+
+  changeListStartAndScroll(pageNum) {
     window.scrollTo(0, 0);
+    this.listStart = ((pageNum - 1) * 30) + 1;
   }
 }
