@@ -5,31 +5,24 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class HackerNewsAPIService {
-	officialUrl: string;
-	subUrl: string;
+	baseUrl: string;
 
   constructor(private http: Http) {
-  	this.officialUrl = 'https://hacker-news.firebaseio.com/v0';
-  	this.subUrl = 'https://node-hnapi.herokuapp.com';
+  	this.baseUrl = 'https://node-hnapi.herokuapp.com';
   }
 
-	fetchStories(storyType: string): Observable<any> {
-		return this.http.get(`${this.officialUrl}/${storyType}.json`)
-	                	.map(response => response.json());
-	}
-
-	fetchItem(id: number): Observable<any> {
-		return this.http.get(`${this.officialUrl}/item/${id}.json`)
+	fetchStories(storyType: string, page: number): Observable<any> {
+		return this.http.get(`${this.baseUrl}/${storyType}?page=${page}`)
 	                	.map(response => response.json());
 	}
 
 	fetchComments(id: number): Observable<any> {
-		return this.http.get(`${this.subUrl}/item/${id}`)
+		return this.http.get(`${this.baseUrl}/item/${id}`)
 	                	.map(response => response.json());
 	}
 
 	fetchUser(id: string): Observable<any> {
-  		return this.http.get(`${this.subUrl}/user/${id}`)
+  		return this.http.get(`${this.baseUrl}/user/${id}`)
   					.map(response => response.json());
  	}
 }
