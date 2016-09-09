@@ -163,12 +163,12 @@ a {
 
 .loading-section {
     height: 70px;
-    margin: 50px 0 40px 40px;
+    margin: 40px 0 40px 40px;
 
   @media #{$mobile-only} {
     display: block;
     position: relative;
-    margin-top: 45vh 0;
+    margin: 45vh 0;
   }
 }
 

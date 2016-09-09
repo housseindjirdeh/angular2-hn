@@ -45,13 +45,9 @@ ol {
 }
 
 .post {
-  padding: 0 0 10px 5px;
+  padding: 10px 0 10px 5px;
   transition: background-color 0.2s ease;
-
-  @media #{$mobile-only} {
-    padding: 10px 0 10px 5px;
-    border-bottom: 1px solid #CECECB;
-  }
+  border-bottom: 1px solid #CECECB;
 
   .itemNum {
     color: #696969;
@@ -140,12 +136,12 @@ ol {
 
 .loading-section {
     height: 70px;
-    margin: 50px 0 40px 40px;
+    margin: 40px 0 40px 40px;
 
   @media #{$mobile-only} {
     display: block;
     position: relative;
-    margin-top: 45vh 0;
+    margin: 45vh 0;
   }
 }
 

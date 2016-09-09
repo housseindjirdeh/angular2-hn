@@ -16,7 +16,7 @@
         </a>
       </p>
     </div>
-    <div class="laptop" [class.item-header]="item.comments_count > 0" [class.head-margin]="item.text">
+    <div class="laptop" [class.item-header]="item.comments_count > 0 || item.type === 'job'" [class.head-margin]="item.text">
       <p *ngIf="item.url.indexOf('http://') === 0 || item.url.indexOf('https://') === 0">
         <a class="title" href="{{item.url}}">
         {{item.title}}
