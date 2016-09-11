@@ -1,14 +1,17 @@
-<div class="main-content">
-  <ol [class.list-margin]="storiesType !== 'jobs'">
-    <li *ngFor="let item of items | slice:0:30" class="post">
-      <item class="item-block" itemID="{{ item }}"></item>
+<div class="loading-section" *ngIf="!items">
+  <!-- Loading bars that show when request is pending -->
+</div>
+<div *ngIf="items">
+  <ol>
+    <li *ngFor="let item of items" class="post">
+      <item class="item-block" [item]="item"></item>
     </li>
   </ol>
   <div class="nav">
-    <a href="" class="prev">
+    <a class="prev">
       ‹ Prev
     </a>
-    <a href="" class="more">
+    <a class="more">
       More ›
     </a>
   <div>
