@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 import { HackerNewsAPIService } from '../hackernews-api.service';
 
@@ -11,34 +11,24 @@ import { HackerNewsAPIService } from '../hackernews-api.service';
 })
 
 export class StoriesComponent implements OnInit {
-  sub: any;
+  typeSub: any;
+  pageSub: any;
   items;
-  storiesType: string;
+  storiesType;
   pageNum: number;
   listStart: number;
 
   constructor(
     private _hackerNewsAPIService: HackerNewsAPIService, 
-    private _router: Router,
     private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
-    let currentRoute = this._router.url;
+    this.typeSub = this.route
+      .data
+      .subscribe(data => this.storiesType = (data as any).storiesType);
 
-    if (currentRoute.includes('newest')) {
-      this.storiesType = 'newest';
-    } else if (currentRoute.includes('show')) {
-      this.storiesType = 'show';
-    } else if (currentRoute.includes('ask')) {
-      this.storiesType = 'ask';
-    } else if (currentRoute.includes('jobs')) {
-      this.storiesType = 'jobs';
-    } else {
-      this.storiesType = 'news';
-    }
-
-    this.sub = this.route.params.subscribe(params => {
+    this.pageSub = this.route.params.subscribe(params => {
       this.pageNum = params['page'] ? +params['page'] : 1;
       this._hackerNewsAPIService.fetchStories(this.storiesType, this.pageNum)
                               .subscribe(
