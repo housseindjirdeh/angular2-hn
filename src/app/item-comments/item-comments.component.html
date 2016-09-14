@@ -1,3 +1,42 @@
-<p>
-  item-comments works!
-</p>
+<div class="main-content">
+  <div class="loading-section" *ngIf="!item">
+    <!-- You can add a loading indicator here if you want to :) -->
+  </div>
+  <div *ngIf="item" class="item">
+    <div class="mobile item-header">
+     <!-- Markup that shows only on mobile (to give the app a
+    responsive mobile feel). Same attributes as above 
+    nothing really new here (but refer to the source 
+    file if you're interested) -->
+    </div>
+    <div class="laptop" [class.item-header]="item.comments_count > 0 || item.type === 'job'" [class.head-margin]="item.text">
+      <p>
+        <a class="title" href="{{item.url}}">
+        {{item.title}}
+        </a>
+        <span *ngIf="item.domain" class="domain">({{item.domain}})</span>
+      </p>
+      <div class="subtext">
+        <span>
+        {{item.points}} points by 
+          <a href="">{{item.user}}</a>
+        </span> 
+        <span>
+          {{item.time_ago}}
+          <span> |
+            <a [routerLink]="['/item', item.id]">
+              <span *ngIf="item.comments_count !== 0">
+                {{item.comments_count}}
+                <span *ngIf="item.comments_count === 1">comment</span>
+                <span *ngIf="item.comments_count > 1">comments</span>
+              </span>
+              <span *ngIf="item.comments_count === 0">discuss</span>
+            </a>
+          </span>
+        </span> 
+      </div>
+    </div>
+    <p class="subject" [innerHTML]="item.content"></p>
+    <app-comment-tree [commentTree]="item.comments"></app-comment-tree>
+  </div>
+</div>
