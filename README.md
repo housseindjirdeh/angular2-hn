@@ -35,7 +35,7 @@ Feel free to send me feedback on [twitter](https://twitter.com/hdjirdeh) or [fil
 ## Build process
 
  - Clone or download the repo
- - If you don't have Angular CLI installed: `npm install -g angular-cli@webpack`
+ - If you don't have Angular CLI installed: `npm install -g angular-cli@latest`
  - `ng init`
  - Input `n` for each file to not overwrite any file changes
  - `ng serve`
