@@ -1,6 +1,6 @@
 {
   "project": {
-    "version": "1.0.0-beta.11-webpack.8",
+    "version": "1.0.0-beta.14",
     "name": "angular2-hn"
   },
   "apps": [
@@ -20,8 +20,8 @@
       "scripts": [],
       "environments": {
         "source": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts",
-        "dev": "environments/environment.dev.ts"
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
       }
     }
   ],
@@ -38,8 +38,7 @@
     }
   },
   "defaults": {
-    "styleExt": "scss",
-    "prefixInterfaces": false,
-    "lazyRoutePrefix": "+"
+    "styleExt": "css",
+    "prefixInterfaces": false
   }
 }
