@@ -24,6 +24,8 @@
   + [User profiles](https://angular2-hn.firebaseapp.com/user/dhouston)
  + Items load with almost half the bandwidth than Hacker News thanks to this [awesome API]
  + Completely responsive UI that provides a native feel regardless of which device you use
+ 
+If you would like to know how I built this app, I wrote a [blog post](http://houssein.me/angular2-hacker-news) explaining each and every step.
 
 ## Areas of improvement
 
