@@ -4,5 +4,50 @@
   </div>
 </div>
 <div *ngIf="item">
-  <p>Story #{{item.id}}<p>
+	<div class="item-laptop">
+	    <p> 
+	      <a class="title" href="">
+	        {{item.title}}
+	      </a>
+	      <span class="domain">{{item.url | domain}}</span>
+	    </p>
+	    <div class="subtext-laptop">
+	      {{item.score}} points by 
+	      <a href="">{{item.by}}</a>
+	      {{ (item.time | amFromUnix) | amTimeAgo }}
+	      <a href="">
+	        <span *ngIf="item.descendants !== 0">
+	          {{item.descendants}}
+	          <span *ngIf="item.descendants === 1">comment</span>
+	          <span *ngIf="item.descendants > 1">comments</span>
+	        </span>
+	        <span *ngIf="item.descendants === 0">discuss</span>
+	      </a>
+	    </div>
+  </div>
+  <div class="item-mobile">
+    <p> 
+      <a class="title" href="">
+        {{item.title}}
+      </a>
+      <span class="domain">{{item.url}}</span>
+    </p>
+    <div class="subtext-palm">
+      <div class="details">
+        <span class="name"> <a href="">{{item.by}}</a></span>
+        <span class="right">{{item.score}} ★</span>
+      </div>
+      <div class="details">
+      {{ (item.time | amFromUnix) | amTimeAgo }}
+      <a href="" class="comment-number"> • 
+        <span *ngIf="item.descendants !== 0">
+          {{item.descendants}}
+          <span *ngIf="item.descendants === 1">comment</span>
+          <span *ngIf="item.descendants > 1">comments</span>
+        </span>
+        <span *ngIf="item.descendants === 0">discuss</span>
+      </a>
+      </div>
+    </div>
+  </div>
 </div>
