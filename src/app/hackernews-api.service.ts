@@ -25,4 +25,9 @@ export class HackerNewsAPIService {
   		return this.http.get(`${this.baseUrl}/user/${id}`)
   					.map(response => response.json());
  	}
+
+	 fetchPollResult(id: number): Observable<any> {
+		 return this.http.get(`${this.baseUrl}/item/${id}`)
+		 				.map(response => response.json());
+	 }
 }

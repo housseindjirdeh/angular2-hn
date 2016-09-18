@@ -135,6 +135,15 @@ a {
   }
 }
 
+.pollResults {
+    margin-bottom: 1em;
+}
+
+.pollContent * {
+  padding-bottom: 0;
+  margin-bottom: -1em;
+  margin-top: 1em;
+}
 
 .loader {
   background: #B92B27;

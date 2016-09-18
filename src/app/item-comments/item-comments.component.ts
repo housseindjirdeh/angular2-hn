@@ -12,6 +12,8 @@ import { HackerNewsAPIService } from '../hackernews-api.service';
 export class ItemCommentsComponent implements OnInit {
   sub: any;
   item;
+  pollResults: any[] = [];
+
 
   constructor(
     private _hackerNewsAPIService: HackerNewsAPIService,
@@ -26,6 +28,14 @@ export class ItemCommentsComponent implements OnInit {
       let itemID = +params['id'];
       this._hackerNewsAPIService.fetchComments(itemID).subscribe(data => {
         this.item = data;
+        if(this.item.type === 'poll') {
+          let howManyPollResults = this.item.poll.length;
+          for (var i = 1; i <= howManyPollResults; i++) {
+            this._hackerNewsAPIService.fetchPollResult(itemID + i).subscribe(data => {
+              this.pollResults.push(data);
+            })
+          }
+        }
       }, error => console.log('Could not load item' + itemID));
     });
   }
