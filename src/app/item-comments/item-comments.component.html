@@ -48,7 +48,7 @@
         </span>
         </span>
       </div>
-      <div *ngIf="item.type === 'poll'" class="pollResults">
+      <div *ngIf="item.type === 'poll' && pollResults.length === howManyPollResults" class="pollResults">
         <div *ngFor="let pollResult of pollResults" class="pollContent">
           <div [innerHTML]="pollResult.content"></div>
           <div class="subtext">{{pollResult.points}} points</div>

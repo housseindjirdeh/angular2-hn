@@ -13,6 +13,7 @@ export class ItemCommentsComponent implements OnInit {
   sub: any;
   item;
   pollResults: any[] = [];
+  howManyPollResults: number;
 
 
   constructor(
@@ -26,12 +27,12 @@ export class ItemCommentsComponent implements OnInit {
     
     this.sub = this.route.params.subscribe(params => {
       let itemID = +params['id'];
-      this._hackerNewsAPIService.fetchComments(itemID).subscribe(data => {
+      this._hackerNewsAPIService.fetchItemContent(itemID).subscribe(data => {
         this.item = data;
         if(this.item.type === 'poll') {
-          let howManyPollResults = this.item.poll.length;
-          for (var i = 1; i <= howManyPollResults; i++) {
-            this._hackerNewsAPIService.fetchPollResult(itemID + i).subscribe(data => {
+          this.howManyPollResults = this.item.poll.length;
+          for (var i = 1; i <= this.howManyPollResults; i++) {
+            this._hackerNewsAPIService.fetchItemContent(itemID + i).subscribe(data => {
               this.pollResults.push(data);
             })
           }

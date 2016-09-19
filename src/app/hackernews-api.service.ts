@@ -16,7 +16,7 @@ export class HackerNewsAPIService {
 	                	.map(response => response.json());
 	}
 
-	fetchComments(id: number): Observable<any> {
+	fetchItemContent(id: number): Observable<any> {
 		return this.http.get(`${this.baseUrl}/item/${id}`)
 	                	.map(response => response.json());
 	}
@@ -26,8 +26,4 @@ export class HackerNewsAPIService {
   					.map(response => response.json());
  	}
 
-	 fetchPollResult(id: number): Observable<any> {
-		 return this.http.get(`${this.baseUrl}/item/${id}`)
-		 				.map(response => response.json());
-	 }
 }
