@@ -1,6 +1,6 @@
 <div class="item-laptop">
   <p *ngIf="item.url.indexOf('http://') === 0 || item.url.indexOf('https://') === 0">
-    <a class="title" href="{{item.url}}">
+    <a class="title" href="{{item.url}}" target="_blank">
       {{item.title}}
     </a>
     <span *ngIf="item.domain" class="domain">({{item.domain}})</span>
