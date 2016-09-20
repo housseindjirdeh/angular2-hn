@@ -11,7 +11,8 @@
         <a *ngIf="item.url.indexOf('http://') === 0 || item.url.indexOf('https://') === 0" class="title" href="{{item.url}}">
           {{item.title}}
         </a>
-        <a *ngIf="item.url.indexOf('http://') !== 0 && item.url.indexOf('https://') !== 0" class="title" [routerLink]="['/item', item.id]" routerLinkActive="active">
+        <a *ngIf="item.url.indexOf('http://') !== 0 && item.url.indexOf('https://') !== 0" class="title" [routerLink]="['/item', item.id]"
+          routerLinkActive="active">
           {{item.title}}
         </a>
       </p>
@@ -32,7 +33,7 @@
         <span *ngIf="item.type !== 'job'">
         {{item.points}} points by 
           <a [routerLink]="['/user', item.user]" routerLinkActive="active">{{item.user}}</a>
-        </span> 
+        </span>
         <span [class.item-details]="item.type !== 'job'">
           {{item.time_ago}}
           <span *ngIf="item.type !== 'job'"> |
@@ -40,12 +41,18 @@
               <span *ngIf="item.comments_count !== 0">
                 {{item.comments_count}}
                 <span *ngIf="item.comments_count === 1">comment</span>
-                <span *ngIf="item.comments_count > 1">comments</span>
-              </span>
-              <span *ngIf="item.comments_count === 0">discuss</span>
-            </a>
-          </span>
-        </span> 
+        <span *ngIf="item.comments_count > 1">comments</span>
+        </span>
+        <span *ngIf="item.comments_count === 0">discuss</span>
+        </a>
+        </span>
+        </span>
+      </div>
+      <div *ngIf="item.type === 'poll' && pollResults.length === howManyPollResults" class="pollResults">
+        <div *ngFor="let pollResult of pollResults" class="pollContent">
+          <div [innerHTML]="pollResult.content"></div>
+          <div class="subtext">{{pollResult.points}} points</div>
+        </div>
       </div>
     </div>
     <p class="subject" [innerHTML]="item.content"></p>
