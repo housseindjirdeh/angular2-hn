@@ -25,5 +25,4 @@ export class HackerNewsAPIService {
   		return this.http.get(`${this.baseUrl}/user/${id}`)
   					.map(response => response.json());
  	}
-
 }

@@ -15,7 +15,6 @@ export class ItemCommentsComponent implements OnInit {
   pollResults: any[] = [];
   howManyPollResults: number;
 
-
   constructor(
     private _hackerNewsAPIService: HackerNewsAPIService,
     private route: ActivatedRoute,

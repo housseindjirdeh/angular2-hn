@@ -41,11 +41,11 @@
               <span *ngIf="item.comments_count !== 0">
                 {{item.comments_count}}
                 <span *ngIf="item.comments_count === 1">comment</span>
-        <span *ngIf="item.comments_count > 1">comments</span>
-        </span>
-        <span *ngIf="item.comments_count === 0">discuss</span>
-        </a>
-        </span>
+                <span *ngIf="item.comments_count > 1">comments</span>
+              </span>
+              <span *ngIf="item.comments_count === 0">discuss</span>
+            </a>
+          </span>
         </span>
       </div>
       <div *ngIf="item.type === 'poll' && pollResults.length === howManyPollResults" class="pollResults">
