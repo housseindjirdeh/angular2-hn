@@ -26,7 +26,7 @@ export class StoriesComponent implements OnInit {
   ngOnInit() {
     this.typeSub = this.route
       .data
-      .subscribe(data => this.storiesType = data.storiesType);
+      .subscribe(data => this.storiesType = (data as any).storiesType);
 
     this.pageSub = this.route.params.subscribe(params => {
       this.pageNum = +params['page'] ? +params['page'] : 1;
