@@ -1,5 +1,7 @@
 <img alt="Angular 2 HN" title="Angular 2 HN" src="http://i.imgur.com/92Lll7T.png" width="500">
 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](/CONTRIBUTING.md)
+
 **A fast and responsive Hacker News client built with [Angular CLI](https://cli.angular.io/), [RxJS](http://reactivex.io/) and [Webpack](https://webpack.github.io/).**
 
 [Live Version](https://angular2-hn.firebaseapp.com)
@@ -29,8 +31,8 @@ If you would like to know how I built this app, I wrote a [blog post](http://hou
 
 ## Areas of improvement
 
- - Support for polls
  - Realtime updating
+ - Progressive web capabilities 
 
 Feel free to send me feedback on [twitter](https://twitter.com/hdjirdeh) or [file an issue](https://github.com/hdjirdeh/angular2-hn/issues/new)! Feature requests are always welcome.
 
