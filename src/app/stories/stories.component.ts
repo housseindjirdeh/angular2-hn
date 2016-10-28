@@ -10,7 +10,7 @@ export class StoriesComponent implements OnInit {
   items: number[];
 
   constructor() { 
-    this.items = Array(30).map((x,i)=>i);
+    this.items = Array(30);
   }
 
   ngOnInit() {
