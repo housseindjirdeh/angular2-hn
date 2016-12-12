@@ -11,6 +11,11 @@ export class ItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-  
+
   }
+
+  get hasUrl():boolean {
+    return this.item.url.indexOf('http') === 0;
+  }
+
 }
