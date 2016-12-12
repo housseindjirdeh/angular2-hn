@@ -23,7 +23,7 @@ export class ItemCommentsComponent implements OnInit {
 
   ngOnInit() {
     window.scrollTo(0, 0);
-    
+
     this.sub = this.route.params.subscribe(params => {
       let itemID = +params['id'];
       this._hackerNewsAPIService.fetchItemContent(itemID).subscribe(data => {
@@ -43,4 +43,9 @@ export class ItemCommentsComponent implements OnInit {
   goBack() {
     this._location.back();
   }
+
+  get hasUrl():boolean {
+    return this.item.url.indexOf('http') === 0;
+  }
+
 }
