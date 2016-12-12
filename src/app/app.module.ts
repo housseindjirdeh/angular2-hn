@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
 
 import { routing } from './app.routes';
 
@@ -30,7 +29,6 @@ import { CommentComponent } from './comment/comment.component';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
     routing
   ],
   providers: [HackerNewsAPIService],
