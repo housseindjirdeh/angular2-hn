@@ -13,7 +13,10 @@ export function lazyFetch(url, options?){
       .then(res => {
         if(!cancelToken){
           return res.json()
-            .then(data => fetchObserver.next(data) && fetchObserver.complete())
+            .then(data => {
+              fetchObserver.next(data);
+              fetchObserver.complete()
+            })
         }
       }).catch(err => fetchObserver.error(err));
       return () => {
