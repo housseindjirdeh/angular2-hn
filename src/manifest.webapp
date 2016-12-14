@@ -1,6 +1,5 @@
 {
-  "name": "Ng2 Hacker News",
-  "short_name": "Ng2HN",
+  "name": "Angular 2 HN",
   "icons": [{
     "src": "assets/icons/icon-128x128.png",
       "sizes": "128x128",

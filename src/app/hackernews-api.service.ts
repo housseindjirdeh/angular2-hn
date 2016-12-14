@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-// import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
@@ -25,8 +24,6 @@ export function lazyFetch(url, options?){
   });
 }
 
-
-
 @Injectable()
 export class HackerNewsAPIService {
 	baseUrl: string;
@@ -44,6 +41,6 @@ export class HackerNewsAPIService {
 	}
 
 	fetchUser(id: string): Observable<any> {
-  		return lazyFetch(`${this.baseUrl}/user/${id}`);
+  	return lazyFetch(`${this.baseUrl}/user/${id}`);
  	}
 }
