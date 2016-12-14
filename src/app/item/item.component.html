@@ -1,62 +1,39 @@
-<div class="item-laptop">
-  <p *ngIf="item.url.indexOf('http://') === 0 || item.url.indexOf('https://') === 0">
-    <a class="title" href="{{item.url}}" target="_blank">
-      {{item.title}}
-    </a>
-    <span *ngIf="item.domain" class="domain">({{item.domain}})</span>
-  </p>
-  <p *ngIf="item.url.indexOf('http://') !== 0 && item.url.indexOf('https://') !== 0">
-    <a class="title" [routerLink]="['/item', item.id]" routerLinkActive="active">
-      {{item.title}}
-    </a>
-  </p>
-  <div class="subtext-laptop">
-    <span *ngIf="item.type !== 'job'">
-      {{item.points}} points by 
-      <a [routerLink]="['/user', item.user]" routerLinkActive="active">{{item.user}}</a>
-    </span> 
-    <span [class.item-details]="item.type !== 'job'">
-      {{ item.time_ago }}
-      <span *ngIf="item.type !== 'job'"> |
-        <a [routerLink]="['/item', item.id]" routerLinkActive="active">
-          <span *ngIf="item.comments_count !== 0">
-            {{item.comments_count}}
-            <span *ngIf="item.comments_count === 1">comment</span>
-            <span *ngIf="item.comments_count > 1">comments</span>
-          </span>
-          <span *ngIf="item.comments_count === 0">discuss</span>
-        </a>
-      </span>
-    </span>
-  </div>
-</div>
-<div class="item-mobile">
-  <p *ngIf="item.url.indexOf('http://') === 0 || item.url.indexOf('https://') === 0"> 
+<div>
+  <p *ngIf="hasUrl">
     <a class="title" href="{{item.url}}">
       {{item.title}}
     </a>
     <span *ngIf="item.domain" class="domain">({{item.domain}})</span>
   </p>
-  <p *ngIf="item.url.indexOf('http://') !== 0 && item.url.indexOf('https://') !== 0">
+  <p *ngIf="!hasUrl">
     <a class="title" [routerLink]="['/item', item.id]" routerLinkActive="active">
       {{item.title}}
     </a>
   </p>
   <div class="subtext-palm">
     <div class="details" *ngIf="item.type !== 'job'">
-      <span class="name"> <a [routerLink]="['/user', item.user]" routerLinkActive="active">{{item.user}}</a></span>
+      <span class="name"><a [routerLink]="['/user', item.user]" routerLinkActive="active">{{item.user}}</a></span>
       <span class="right">{{item.points}} ★</span>
     </div>
     <div class="details">
     {{ item.time_ago }}
-    <a [routerLink]="['/item', item.id]" routerLinkActive="active" class="comment-number" *ngIf="item.type !== 'job'"> • 
-      <span *ngIf="item.comments_count !== 0">
-        {{item.comments_count}}
-        <span *ngIf="item.comments_count === 1">comment</span>
-        <span *ngIf="item.comments_count > 1">comments</span>
-      </span>
-      <span *ngIf="item.comments_count === 0">discuss</span>
+    <a [routerLink]="['/item', item.id]" routerLinkActive="active" class="comment-number" *ngIf="item.type !== 'job'"> •
+      {{item.comments_count | comment }}
     </a>
     </div>
+  </div>
+  <div class="subtext-laptop">
+    <span *ngIf="item.type !== 'job'">
+      {{item.points}} points by
+      <a [routerLink]="['/user', item.user]" routerLinkActive="active">{{item.user}}</a>
+    </span>
+    <span [class.item-details]="item.type !== 'job'">
+      {{ item.time_ago }}
+      <span *ngIf="item.type !== 'job'"> |
+        <a [routerLink]="['/item', item.id]" routerLinkActive="active">
+          {{item.comments_count | comment }}
+        </a>
+      </span>
+    </span>
   </div>
 </div>

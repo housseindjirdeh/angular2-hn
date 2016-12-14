@@ -1,3 +1,4 @@
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { StoriesComponent } from './stories/stories.component';
@@ -16,4 +17,4 @@ const routes: Routes = [
 ];
 
 // - Updated Export
-export const routing = RouterModule.forRoot(routes);
+export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

@@ -1,0 +1,11 @@
+
+
+0.0.0.0:4200
+gzip
+
+rewrite {
+    if {path} not_has /assets
+    to {path} {path}/ /index.html
+}
+
+root ./dist

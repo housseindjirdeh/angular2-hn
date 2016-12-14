@@ -33,6 +33,9 @@ p {
         text-decoration: underline;
       };
     }
+    @media #{$mobile-only} {
+      display: none;
+    }
   }
 
   .subtext-palm {
@@ -56,6 +59,9 @@ p {
         float: right;
       }
     }
+    @media #{$laptop-only} {
+      display: none;
+    }
   }
 
   .domain {
@@ -64,18 +70,6 @@ p {
     letter-spacing: 0.5px;
   }
 
-  .item-laptop {
-    @media #{$mobile-only} {
-      display: none;
-    }
-  }
-
-  .item-mobile {
-    @media #{$laptop-only} {
-      display: none;
-    }
-  }
-  
   .item-details {
     padding: 10px;
   }

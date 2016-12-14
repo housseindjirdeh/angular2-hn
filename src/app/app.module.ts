@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 import { routing } from './app.routes';
 
@@ -16,6 +14,7 @@ import { UserComponent } from './user/user.component';
 import { ItemCommentsComponent } from './item-comments/item-comments.component';
 import { CommentTreeComponent } from './comment-tree/comment-tree.component';
 import { CommentComponent } from './comment/comment.component';
+import { CommentPipe } from './comment.pipe';
 
 @NgModule({
   declarations: [
@@ -27,12 +26,11 @@ import { CommentComponent } from './comment/comment.component';
     UserComponent,
     ItemCommentsComponent,
     CommentTreeComponent,
-    CommentComponent
+    CommentComponent,
+    CommentPipe
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule,
     routing
   ],
   providers: [HackerNewsAPIService],
