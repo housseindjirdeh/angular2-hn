@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Open%20Sans);
-
 $mobile-only: "only screen and (max-width : 768px)";
 
 #wrapper {
@@ -8,9 +6,10 @@ $mobile-only: "only screen and (max-width : 768px)";
   width: 85%;
   min-height: 80px;
   margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 15px;
   height: 100%;
+  line-height: 1.3;
 
    @media #{$mobile-only} {
     width: 100%;

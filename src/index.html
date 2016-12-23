@@ -12,25 +12,35 @@
 	<meta name="twitter:title" content="Angular 2 HN">
 	<meta name="twitter:description" content="A Hacker News client built with Angular CLI, RxJS and Webpack">
 	<meta name="twitter:creator" content="@hdjirdeh">
-	<meta name="twitter:image" content="http://i.imgur.com/JRn9yjl.png">
+	<meta name="twitter:image" content="assets/images/logo-loading.png">
 
 	<meta property="og:title" content="Angular 2 HN" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://angular2-hn.firebaseapp.com/" />
-	<meta property="og:image" content="http://i.imgur.com/JRn9yjl.png" />
-	<meta property="og:description" content="A Hacker News client built with Angular CLI, RxJS and Webpack" /> 
+	<meta property="og:image" content="assets/images/logo-loading.png" />
+	<meta property="og:description" content="A Hacker News client built with Angular CLI, RxJS and Webpack" />
 	<meta property="og:site_name" content="Angular 2 HN" />
 	<meta property="fb:admins" content="10202985971279760" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  
+
 </head>
 <body>
   <app-root></app-root>
 
   <div class="app-loader">
-    <img class="logo pulse" src="https://houssein.me/assets/images/angular2-hn.png">
+    <img class="logo pulse" src="assets/images/logo-loading.png">
   </div>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+        console.log('Service Worker registered');
+      }).catch(function(err) {
+        console.log('Service Worker registration failed: ', err);
+      });
+    }
+  </script>
 </body>
 </html>

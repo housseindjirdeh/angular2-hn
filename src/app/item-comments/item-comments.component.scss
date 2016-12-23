@@ -65,6 +65,7 @@ a {
 
 .title {
   font-size: 16px;
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 .title-block {
@@ -96,11 +97,13 @@ a {
 
 .subtext {
   font-size: 12px;
-}
-
-.domain, .subtext {
   color: #696969;
   font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.domain {
+  color: #696969;
   letter-spacing: 0.5px;
 }
 
