@@ -78,4 +78,4 @@ Click [here](https://cli.angular.io/) to see a full list of what you can do with
 Note: Any Service Worker changes will not be reflected when you run the application locally in development. To test service worker changes:
 
  - `npm run sw` to generate the service worker file
- - `npm run static-serve` to load the application along with the service worker asset
+ - `npm run static-serve` to load the application along with the service worker asset using [lite-server](https://github.com/johnpapa/lite-server)
