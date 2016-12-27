@@ -6,7 +6,8 @@ module.exports = {
     'dist/index.html',
     'dist/**.js',
     'dist/**.css',
-    'dist/assets/images/**.png'
+    'dist/assets/images/*',
+    'dist/assets/icons/*'
   ],
   runtimeCaching: [{
     urlPattern: /node-hnapi\.herokuapp\.com/,
