@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import 'isomorphic-fetch';
 import 'rxjs/add/operator/map';
 
 declare var fetch;
