@@ -19,7 +19,7 @@
     </div>
     <div class="laptop" [class.item-header]="item.comments_count > 0 || item.type === 'job'" [class.head-margin]="item.text">
       <p *ngIf="hasUrl">
-        <a class="title" href="{{item.url}}" target="_blank">
+        <a class="title" href="{{item.url}}">
         {{item.title}}
         </a>
         <span *ngIf="item.domain" class="domain">({{item.domain}})</span>
