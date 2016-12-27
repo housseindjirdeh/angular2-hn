@@ -1,5 +1,6 @@
 {
 	"name": "Angular 2 HN",
+	"short_name": "Angular 2 HN",
 	"icons": [
 		{
 			"src": "assets/icons/android-chrome-192x192.png",
@@ -15,5 +16,6 @@
 	"theme_color": "#b92b27",
   "background_color": "#ffffff",
 	"display": "standalone",
-	"orientation": "portrait"
+	"orientation": "portrait",
+	"start_url": "./?utm_source=web_app_manifest"
 }
