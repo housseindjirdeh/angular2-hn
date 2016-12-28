@@ -5,6 +5,7 @@ import 'rxjs/add/operator/map';
 
 import { Story } from './story';
 import { User } from './user';
+import { PollResult } from './poll-result';
 
 declare var fetch;
 
@@ -41,6 +42,21 @@ export class HackerNewsAPIService {
 	}
 
   fetchItemContent(id: number): Observable<Story> {
+    return lazyFetch(`${this.baseUrl}/item/${id}`).map( (story: Story) => {
+      if(story.type === 'poll') {
+        let numberOfPollOptions = story.poll.length;
+        story.poll = [];
+        for (let i = 1; i <= numberOfPollOptions; i++) {
+          this.fetchPollContent(story.id + i).subscribe(pollResults => {
+            story.poll.push(pollResults);
+          })
+        }
+      }
+      return story;
+    });
+	}
+
+  fetchPollContent(id: number): Observable<PollResult> {
 		return lazyFetch(`${this.baseUrl}/item/${id}`);
 	}
 

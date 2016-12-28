@@ -1,5 +1,6 @@
 import { Comment } from './comment';
 import { StoryType } from './story-type.type';
+import { PollResult } from './poll-result';
 
 export class Story {
     id: number;
@@ -13,7 +14,7 @@ export class Story {
     domain: string;
     comments: Comment[];
     comments_count: number;
-    poll: any;
+    poll: PollResult[];
     deleted: boolean;
     dead: boolean;
 }
