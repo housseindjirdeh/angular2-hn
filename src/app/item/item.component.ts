@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Story } from '../story';
 
 @Component({
   selector: 'item',
@@ -7,15 +8,13 @@ import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ItemComponent implements OnInit {
-	@Input() item;
+  @Input() item: Story;
 
   constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
 
-  }
-
-  get hasUrl():boolean {
+  get hasUrl(): boolean {
     return this.item.url.indexOf('http') === 0;
   }
 

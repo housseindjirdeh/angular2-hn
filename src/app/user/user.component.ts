@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { Subscription } from 'rxjs/Subscription';
 
 import { HackerNewsAPIService } from '../hackernews-api.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-user',
@@ -10,11 +12,11 @@ import { HackerNewsAPIService } from '../hackernews-api.service';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-	sub: any;
-  user; 
+  sub: Subscription;
+  user: User;
 
   constructor(
-    private _hackerNewsAPIService: HackerNewsAPIService, 
+    private _hackerNewsAPIService: HackerNewsAPIService,
     private route: ActivatedRoute,
     private _location: Location
   ) {}

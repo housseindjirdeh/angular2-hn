@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { Subscription } from 'rxjs/Subscription';
 import { ActivatedRoute } from '@angular/router';
 
 import { HackerNewsAPIService } from '../hackernews-api.service';
+import { Story } from '../story';
 
 @Component({
   selector: 'app-stories',
@@ -11,15 +13,15 @@ import { HackerNewsAPIService } from '../hackernews-api.service';
 })
 
 export class StoriesComponent implements OnInit {
-  typeSub: any;
-  pageSub: any;
-  items;
+  typeSub: Subscription;
+  pageSub: Subscription;
+  items: Story[];
   storiesType;
   pageNum: number;
   listStart: number;
 
   constructor(
-    private _hackerNewsAPIService: HackerNewsAPIService, 
+    private _hackerNewsAPIService: HackerNewsAPIService,
     private route: ActivatedRoute
   ) {}
 
