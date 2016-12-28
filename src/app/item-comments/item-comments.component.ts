@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { Subscription } from 'rxjs/Subscription';
 
 import { HackerNewsAPIService } from '../hackernews-api.service';
 import { Story } from '../story';
@@ -11,7 +12,7 @@ import { Story } from '../story';
   styleUrls: ['./item-comments.component.scss']
 })
 export class ItemCommentsComponent implements OnInit {
-  sub: any;
+  sub: Subscription;
   item: Story;
   pollResults: any[] = [];
   howManyPollResults: number;

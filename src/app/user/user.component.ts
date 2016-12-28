@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { Subscription } from 'rxjs/Subscription';
 
 import { HackerNewsAPIService } from '../hackernews-api.service';
 import { User } from '../user';
@@ -11,7 +12,7 @@ import { User } from '../user';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-	sub: any;
+	sub: Subscription;
   user: User;
 
   constructor(

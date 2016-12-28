@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { Subscription } from 'rxjs/Subscription';
 import { ActivatedRoute } from '@angular/router';
 
 import { HackerNewsAPIService } from '../hackernews-api.service';
@@ -12,8 +13,8 @@ import { Story } from '../story';
 })
 
 export class StoriesComponent implements OnInit {
-  typeSub: any;
-  pageSub: any;
+  typeSub: Subscription;
+  pageSub: Subscription;
   items: Story[];
   storiesType;
   pageNum: number;
