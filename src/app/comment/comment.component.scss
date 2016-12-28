@@ -1,6 +1,6 @@
 $mobile-only: "only screen and (max-width : 768px)";
 $laptop-only: "only screen and (min-width : 769px)";
-$tablet-only: "only screen and (max-width: 1024px)";
+$tablet-only: "only screen and (max-width : 1024px)";
 
 :host >>> {
   a {
@@ -76,7 +76,7 @@ $tablet-only: "only screen and (max-width: 1024px)";
 }
 
 .comment-text {
-  font-size: 14px;
+  font-size: 15px;
   margin-top: 0;
   margin-bottom: 20px;
   word-wrap: break-word;

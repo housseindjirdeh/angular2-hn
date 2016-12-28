@@ -18,7 +18,6 @@ $mobile-only: "only screen and (max-width : 768px)";
 
   a {
     display: inline;
-    letter-spacing: 1px;
   }
 }
 
@@ -38,7 +37,7 @@ $mobile-only: "only screen and (max-width : 768px)";
 }
 
 h1 {
-  font-weight: bold;
+  font-weight: normal;
   display: inline-block;
   vertical-align:middle;
   margin: 0;
@@ -84,6 +83,7 @@ h1 {
 
 .header-nav {
   display: inline-block;
+  margin-left: 20px;
 
   @media #{$mobile-only} {
     float: right;
@@ -91,12 +91,18 @@ h1 {
   }
 
   a {
-    color: #fff;
+    color: hsla(0,0%,100%,.8);
     text-decoration: none;
+    margin: 0 5px;
+    letter-spacing: 1.8px;
 
     &:hover {
-      font-weight: bold;
-    };
+      color: #fff;
+    }
+  }
+
+  .active {
+    color: #fff;
   }
 }
 
@@ -104,6 +110,7 @@ h1 {
   position: absolute;
   right: 20px;
   font-size: 16px;
+  letter-spacing: 1px;
 
   @media #{$mobile-only} {
     display: none;
