@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { HackerNewsAPIService } from '../hackernews-api.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-user',
@@ -11,7 +12,7 @@ import { HackerNewsAPIService } from '../hackernews-api.service';
 })
 export class UserComponent implements OnInit {
 	sub: any;
-  user; 
+  user: User;
 
   constructor(
     private _hackerNewsAPIService: HackerNewsAPIService, 

@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { HackerNewsAPIService } from '../hackernews-api.service';
+import { Story } from '../story';
 
 @Component({
   selector: 'app-item-comments',
@@ -11,7 +12,7 @@ import { HackerNewsAPIService } from '../hackernews-api.service';
 })
 export class ItemCommentsComponent implements OnInit {
   sub: any;
-  item;
+  item: Story;
   pollResults: any[] = [];
   howManyPollResults: number;
 

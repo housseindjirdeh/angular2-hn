@@ -3,6 +3,9 @@ import { Observable } from 'rxjs/Observable';
 import 'isomorphic-fetch';
 import 'rxjs/add/operator/map';
 
+import { Story } from './story';
+import { User } from './user';
+
 declare var fetch;
 
 //wrap fetch in observable so we can keep it chill
@@ -33,15 +36,15 @@ export class HackerNewsAPIService {
   	this.baseUrl = 'https://node-hnapi.herokuapp.com';
   }
 
-	fetchStories(storyType: string, page: number): Observable<any> {
+  fetchStories(storyType: string, page: number): Observable<Story[]> {
 		return lazyFetch(`${this.baseUrl}/${storyType}?page=${page}`);
 	}
 
-	fetchItemContent(id: number): Observable<any> {
+  fetchItemContent(id: number): Observable<Story> {
 		return lazyFetch(`${this.baseUrl}/item/${id}`);
 	}
 
-	fetchUser(id: string): Observable<any> {
+	fetchUser(id: string): Observable<User> {
   	return lazyFetch(`${this.baseUrl}/user/${id}`);
  	}
 }

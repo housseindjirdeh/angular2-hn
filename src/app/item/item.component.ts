@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Story } from '../story';
 
 @Component({
   selector: 'item',
@@ -7,7 +8,7 @@ import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ItemComponent implements OnInit {
-	@Input() item;
+	@Input() item: Story;
 
   constructor() {}
 
