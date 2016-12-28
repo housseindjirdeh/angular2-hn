@@ -36,7 +36,7 @@ export class ItemCommentsComponent implements OnInit {
     this._location.back();
   }
 
-  get hasUrl():boolean {
+  get hasUrl(): boolean {
     return this.item.url.indexOf('http') === 0;
   }
 

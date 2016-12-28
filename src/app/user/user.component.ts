@@ -12,11 +12,11 @@ import { User } from '../user';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-	sub: Subscription;
+  sub: Subscription;
   user: User;
 
   constructor(
-    private _hackerNewsAPIService: HackerNewsAPIService, 
+    private _hackerNewsAPIService: HackerNewsAPIService,
     private route: ActivatedRoute,
     private _location: Location
   ) {}

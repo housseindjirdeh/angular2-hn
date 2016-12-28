@@ -8,15 +8,13 @@ import { Story } from '../story';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ItemComponent implements OnInit {
-	@Input() item: Story;
+  @Input() item: Story;
 
   constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
 
-  }
-
-  get hasUrl():boolean {
+  get hasUrl(): boolean {
     return this.item.url.indexOf('http') === 0;
   }
 

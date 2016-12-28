@@ -11,8 +11,6 @@ export class CommentTreeComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-  
-  }
+  ngOnInit() {}
 
 }

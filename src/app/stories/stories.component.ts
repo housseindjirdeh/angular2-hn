@@ -21,7 +21,7 @@ export class StoriesComponent implements OnInit {
   listStart: number;
 
   constructor(
-    private _hackerNewsAPIService: HackerNewsAPIService, 
+    private _hackerNewsAPIService: HackerNewsAPIService,
     private route: ActivatedRoute
   ) {}
 
