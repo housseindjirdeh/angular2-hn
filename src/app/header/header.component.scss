@@ -64,6 +64,7 @@ h1 {
   height: 20px;
   left: 10px;
   top: 27px;
+  z-index: -1;
 
   @media #{$mobile-only} {
     top: 22px;
