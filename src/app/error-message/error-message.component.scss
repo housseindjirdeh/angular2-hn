@@ -1,9 +1,5 @@
-$mobile-only: "only screen and (max-width : 768px)";
-$laptop-only: "only screen and (min-width : 769px)";
-
-$primary-red: #b92b27;
-$wrapper-color: #f5f5f5;
-$skull-size: 200px;
+@import "../shared/media";
+@import "../shared/variables";
 
 .error-section {
   height: 300px;
@@ -48,10 +44,14 @@ $skull-size: 200px;
         content: "";
         position: absolute;
         border-radius: 50%;
-        background-color: #f5f5f5;
+        background-color: $wrapper-color-laptop;
         width: 20%;
         height: 30%;
         bottom: 10%;
+
+        @media #{$mobile-only} {
+          background-color: $wrapper-color-mobile;
+        }
       }
       &:before {
         left: 10%;
@@ -62,19 +62,28 @@ $skull-size: 200px;
       .crack {
         width: 10%;
         height: 10%;
-        background-color: #f5f5f5;
+        background-color: $wrapper-color-laptop;
         position: absolute;
         top: 0;
         right: 25%;
         transform: skew(-15deg);
+
+        @media #{$mobile-only} {
+          background-color: $wrapper-color-mobile;
+        }
+
         &:before {
           content: "";
           position: absolute;
           top: 100%;
           left: $skull-size / 15;
-          border-top: $skull-size / 8 solid #f5f5f5;
+          border-top: $skull-size / 8 solid $wrapper-color-laptop;
           border-right: $skull-size / 20 solid transparent;
           border-left: $skull-size / 40 solid transparent;
+
+          @media #{$mobile-only} {
+            border-top: $skull-size / 8 solid $wrapper-color-mobile;
+          }
         }
       }
     }
@@ -92,9 +101,13 @@ $skull-size: 200px;
         width: 15%;
         height: 50%;
         border-radius: 50% / 30%;
-        background-color: #f5f5f5;
+        background-color: $wrapper-color-laptop;
         left: 42.5%;
         top: -25%;
+
+        @media #{$mobile-only} {
+          background-color: $wrapper-color-mobile;
+        }
       }
       .teeth {
         position: absolute;
@@ -103,15 +116,23 @@ $skull-size: 200px;
         width: 10%;
         height: 50%;
         margin-bottom: -5%;
-        background-color: #f5f5f5;
+        background-color: $wrapper-color-laptop;
         border-radius: 50% / 20%;
+
+        @media #{$mobile-only} {
+          background-color: $wrapper-color-mobile;
+        }
         &:before, &:after {
           content: "";
           position: absolute;
           width: 100%;
           height: 100%;
           border-radius: 50% / 20%;
-          background-color: #f5f5f5;
+          background-color: $wrapper-color-laptop;
+
+          @media #{$mobile-only} {
+            background-color: $wrapper-color-mobile;
+          }
         }
         &:before {
           left: -250%;

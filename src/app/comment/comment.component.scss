@@ -1,10 +1,9 @@
-$mobile-only: "only screen and (max-width : 768px)";
-$laptop-only: "only screen and (min-width : 769px)";
-$tablet-only: "only screen and (max-width : 1024px)";
+@import "../shared/media";
+@import "../shared/variables";
 
 :host >>> {
   a {
-    color: #b92b27;
+    color: $primary-red;
     font-weight: bold;
     text-decoration: none;
     &:hover {
@@ -20,7 +19,7 @@ $tablet-only: "only screen and (max-width : 1024px)";
   letter-spacing: 0.5px;
   margin-bottom: 8px;
   a {
-    color: #b92b27;
+    color: $primary-red;
     text-decoration: none;
 
     &:hover {
@@ -54,7 +53,7 @@ $tablet-only: "only screen and (max-width : 1024px)";
   letter-spacing: 0.5px;
   margin: 30px 0;
   a {
-    color: #b92b27;
+    color: $primary-red;
     text-decoration: none;
   }
 }

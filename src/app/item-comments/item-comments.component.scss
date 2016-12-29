@@ -1,6 +1,5 @@
-$mobile-only: "only screen and (max-width : 768px)";
-$laptop-only: "only screen and (min-width : 769px)";
-$tablet-only: "only screen and (max-width: 1024px)";
+@import "../shared/media";
+@import "../shared/variables";
 
 .main-content {
   position: relative;
@@ -86,8 +85,8 @@ a {
     width: 0.6rem;
     height: 0.6rem;
     background: transparent;
-    border-top: .3rem solid #B92B27;
-    border-right: .3rem solid #B92B27;
+    border-top: .3rem solid $primary-red;
+    border-right: .3rem solid $primary-red;
     box-shadow: 0 0 0 lightgray;
     transition: all 200ms ease;
     left: 4%;
@@ -108,11 +107,11 @@ a {
 }
 
 .domain a {
-  color: #b92b27;
+  color: $primary-red;
 }
 
 .subtext a {
-  color: #b92b27;
+  color: $primary-red;
   &:hover {
     text-decoration: underline;
   }
@@ -123,7 +122,7 @@ a {
 }
 
 .item-header {
-  border-bottom: 2px solid #b92b27;
+  border-bottom: 2px solid $primary-red;
   padding-bottom: 10px;
 }
 

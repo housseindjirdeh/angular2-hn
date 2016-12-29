@@ -1,5 +1,5 @@
-$mobile-only: "only screen and (max-width : 768px)";
-$laptop-only: "only screen and (min-width : 769px)";
+@import "../shared/media";
+@import "../shared/variables";
 
 p {
     margin: 2px 0;
@@ -28,7 +28,7 @@ p {
     letter-spacing: 0.5px;
 
     a {
-      color: #b92b27;
+      color: $primary-red;
 
       &:hover {
         text-decoration: underline;
@@ -46,7 +46,7 @@ p {
     letter-spacing: 0.5px;
 
     a {
-      color: #b92b27;
+      color: $primary-red;
 
       &:hover {
         text-decoration: underline;

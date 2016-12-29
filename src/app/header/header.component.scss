@@ -1,7 +1,8 @@
-$mobile-only: "only screen and (max-width : 768px)";
+@import "../shared/media";
+@import "../shared/variables";
 
 #header {
-  background-color: #b92b27;
+  background-color: $primary-red;
   color: #fff;
   padding: 6px 0;
   line-height: 18px;

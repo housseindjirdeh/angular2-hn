@@ -1,7 +1,5 @@
-$mobile-only: "only screen and (max-width : 768px)";
-$laptop-only: "only screen and (min-width : 769px)";
-
-$primary-red: #b92b27;
+@import "../shared/media";
+@import "../shared/variables";
 
 .loader {
   background: $primary-red;
