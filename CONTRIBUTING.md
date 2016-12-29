@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing! Please feel free to put up a PR for any issue or feature request. 
+Thank you for your interest in contributing! Please feel free to put up a PR for any issue or feature request.
 Even if you have little to no experience with Angular 2, I'll be more than happy to help. :)
 
 ## Setup
@@ -12,7 +12,7 @@ Even if you have little to no experience with Angular 2, I'll be more than happy
 5. `ng init`
 6. Input `n` for each file to not overwrite any file changes
 7. Run `npm build` to check if a build works (if this doesn't work, please file an issue with your error message)
-8. Run `npm serve` and open `localhost:4200` in a browser
+8. Run `ng serve` and open `localhost:4200` in a browser
 9. Work your magic
 10. Run `ng build --prod --aot` or `ng serve --prod --at` to kick off a production build and make sure nothing is broken
 11. To test service worker changes:
