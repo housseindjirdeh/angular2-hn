@@ -14,6 +14,7 @@ import { User } from '../user';
 export class UserComponent implements OnInit {
   sub: Subscription;
   user: User;
+  errorMessage: string;
 
   constructor(
     private _hackerNewsAPIService: HackerNewsAPIService,
@@ -26,7 +27,7 @@ export class UserComponent implements OnInit {
       let userID = params['id'];
       this._hackerNewsAPIService.fetchUser(userID).subscribe(data => {
         this.user = data;
-      }, error => console.log('Could not load user'));
+      }, error => this.errorMessage = 'Could not load user');
     });
   }
 

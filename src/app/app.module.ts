@@ -15,6 +15,8 @@ import { ItemCommentsComponent } from './item-comments/item-comments.component';
 import { CommentTreeComponent } from './comment-tree/comment-tree.component';
 import { CommentComponent } from './comment/comment.component';
 import { CommentPipe } from './comment.pipe';
+import { LoaderComponent } from './loader/loader.component';
+import { ErrorMessageComponent } from './error-message/error-message.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { CommentPipe } from './comment.pipe';
     ItemCommentsComponent,
     CommentTreeComponent,
     CommentComponent,
-    CommentPipe
+    CommentPipe,
+    LoaderComponent,
+    ErrorMessageComponent
   ],
   imports: [
     BrowserModule,
