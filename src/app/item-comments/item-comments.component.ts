@@ -14,6 +14,7 @@ import { Story } from '../story';
 export class ItemCommentsComponent implements OnInit {
   sub: Subscription;
   item: Story;
+  errorMessage: string;
 
   constructor(
     private _hackerNewsAPIService: HackerNewsAPIService,
@@ -28,7 +29,7 @@ export class ItemCommentsComponent implements OnInit {
       let itemID = +params['id'];
       this._hackerNewsAPIService.fetchItemContent(itemID).subscribe(item => {
         this.item = item;
-      }, error => console.log('Could not load item' + itemID));
+      }, error => this.errorMessage = 'Could not load item comments.');
     });
   }
 

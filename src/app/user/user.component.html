@@ -1,9 +1,5 @@
-<!-- <div class="loading-section" *ngIf="!user">
-  <div class="loader">
-    Loading...
-  </div>
-</div> -->
-<app-error-message [message]="errorMessage" *ngIf="!user"></app-error-message>
+<app-loader *ngIf="!user && !errorMessage"></app-loader>
+<app-error-message [message]="errorMessage" *ngIf="!user && errorMessage"></app-error-message>
 
 <div *ngIf="user" class="profile">
   <div class="mobile item-header">

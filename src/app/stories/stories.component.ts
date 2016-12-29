@@ -19,6 +19,7 @@ export class StoriesComponent implements OnInit {
   storiesType;
   pageNum: number;
   listStart: number;
+  errorMessage: string;
 
   constructor(
     private _hackerNewsAPIService: HackerNewsAPIService,
@@ -35,7 +36,7 @@ export class StoriesComponent implements OnInit {
       this._hackerNewsAPIService.fetchStories(this.storiesType, this.pageNum)
                               .subscribe(
                                 items => this.items = items,
-                                error => console.log('Error fetching' + this.storiesType + 'stories'),
+                                error => this.errorMessage = 'Could not load ' + this.storiesType + ' stories.',
                                 () => {
                                   this.listStart = ((this.pageNum - 1) * 30) + 1;
                                   window.scrollTo(0, 0);

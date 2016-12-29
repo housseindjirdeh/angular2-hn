@@ -54,7 +54,7 @@ With Chromium based browsers for Android (Chrome, Opera, etc...), Angular 2 HN i
 <p align="center">
   <img src = "http://i.imgur.com/1RaaNkr.png">
 </p>
- 
+
 ## Possible areas of improvement
 
  - Realtime updating
@@ -68,10 +68,8 @@ Feel free to send me feedback on [twitter](https://twitter.com/hdjirdeh) or [fil
  - If you don't have Angular CLI installed: `npm install -g angular-cli@latest`
  - `ng init`
  - Input `n` for each file to not overwrite any file changes
- - `ng serve`
+ - `ng serve` will kick off the server at `http://localhost:4200/`. Any changes you do to the source files should automatically reload the app
  - `ng serve --prod --aot` will kick off a production build with uglifying, tree-shaking and Ahead-of-Time compilation
-
-This will kick off the server at `http://localhost:4200/`. Any changes you do to the source files should automatically reload the app.
 
 Click [here](https://cli.angular.io/) to see a full list of what you can do with Angular CLI.
 

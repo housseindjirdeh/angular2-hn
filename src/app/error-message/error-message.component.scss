@@ -18,7 +18,12 @@ $skull-size: 200px;
 
   p {
     text-align: center;
-    padding: 25px;
+    padding: 0 25px;
+
+    &.strong {
+      margin-top: 25px;
+      font-weight: bold;
+    }
   }
 
   .skull {

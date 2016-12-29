@@ -27,7 +27,7 @@ export class UserComponent implements OnInit {
       let userID = params['id'];
       this._hackerNewsAPIService.fetchUser(userID).subscribe(data => {
         this.user = data;
-      }, error => this.errorMessage = 'Could not load user');
+      }, error => this.errorMessage = 'Could not load user ' + userID + '.');
     });
   }
 
