@@ -77,3 +77,13 @@ Note: Any Service Worker changes will not be reflected when you run the applicat
 
  - `npm run sw` to generate the service worker file
  - `npm run static-serve` to load the application along with the service worker asset using [lite-server](https://github.com/johnpapa/lite-server)
+ 
+ ## Contributors
+ 
+ A million thanks.
+ 
+ * [Mateusz](https://github.com/mateuszwitkowski)
+ * [Jordi Collell](https://github.com/jordic)
+ * [Ben Brooks](https://github.com/bbrks)
+ * [Zach Berger](https://github.com/zachberger)
+ * [blAck PR](https://github.com/blackpr)
