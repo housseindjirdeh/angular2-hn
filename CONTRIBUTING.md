@@ -17,7 +17,7 @@ Even if you have little to no experience with Angular, I'll be more than happy t
 10. To test service worker changes:
   * `npm run sw` to generate the service worker file
   * `npm run static-serve` to load the application along with the service worker asset using [lite-server](https://github.com/johnpapa/lite-server)
-11. Add yourself to the contributor's list in the README!
+11. Add yourself to the [contributor's list](https://github.com/hdjirdeh/angular2-hn#contributors) in the README!
 12. Commit your changes and reference the issue you're addressing (for example: `git commit -am 'Commit message. Closes #5'`)
 13. Push your branch to your fork
 14. Create a pull request from your branch on your fork to `master` on this repo
