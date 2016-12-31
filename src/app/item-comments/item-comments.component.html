@@ -9,7 +9,7 @@
         <a *ngIf="hasUrl" class="title" href="{{item.url}}" [attr.target]="settings.openLinkInNewTab ? '_blank' : null" [attr.rel]="settings.openLinkInNewTab ? 'noopener' : null">
           {{item.title}}
         </a>
-        <a *ngIf="!hasUrl" class="title" [routerLink]="['/item', item.id]">
+        <a *ngIf="!hasUrl" class="title" [routerLink]="['/item', item.id]"
           routerLinkActive="active">
           {{item.title}}
         </a>
