@@ -9,6 +9,7 @@ import { StoriesComponent } from './stories/stories.component';
 import { FooterComponent } from './footer/footer.component';
 import { ItemComponent } from './item/item.component';
 
+import { SettingsService } from './settings.service';
 import { HackerNewsAPIService } from './hackernews-api.service';
 import { UserComponent } from './user/user.component';
 import { ItemCommentsComponent } from './item-comments/item-comments.component';
@@ -17,6 +18,7 @@ import { CommentComponent } from './comment/comment.component';
 import { CommentPipe } from './comment.pipe';
 import { LoaderComponent } from './loader/loader.component';
 import { ErrorMessageComponent } from './error-message/error-message.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -31,13 +33,14 @@ import { ErrorMessageComponent } from './error-message/error-message.component';
     CommentComponent,
     CommentPipe,
     LoaderComponent,
-    ErrorMessageComponent
+    ErrorMessageComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
     routing
   ],
-  providers: [HackerNewsAPIService],
+  providers: [HackerNewsAPIService, SettingsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -15,9 +15,10 @@
             <a routerLink="/jobs/1" routerLinkActive="active" (click)="scrollTop()">jobs</a>
           </span>
         </div>
-        <div class="info">
-          Built with <a href="https://cli.angular.io/" target="_blank" rel="noopener">Angular CLI</a>
-        </div>
+      </div>
+      <div class="info">
+        <img class="settings" src="assets/svg/cog.svg" alt="Settings" (click)="toggleSettings()">
       </div>
     </div>
+    <app-settings *ngIf="settings.showSettings"></app-settings>
   </header>

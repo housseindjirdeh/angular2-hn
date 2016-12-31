@@ -1,0 +1,72 @@
+@import "../shared/media";
+@import "../shared/variables";
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  z-index: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 30px;
+  background: $primary-red;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  hr {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+  .close {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgba(255,255,255,0.8);
+    &:hover {
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+  .content {
+    max-height: 30%;
+    color: #fff;
+    letter-spacing: 1px;
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .box, .popup {
+    width: 70%;
+  }
+}
+
+input[type=checkbox] {
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding: 10px;
+}
+
+.checkboxtext {
+  font-size: 110%;
+  display: inline;
+  padding-left: 8px;
+}

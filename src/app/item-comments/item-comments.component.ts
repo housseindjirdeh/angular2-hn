@@ -4,7 +4,10 @@ import { Location } from '@angular/common';
 import { Subscription } from 'rxjs/Subscription';
 
 import { HackerNewsAPIService } from '../hackernews-api.service';
+import { SettingsService } from '../settings.service';
+
 import { Story } from '../story';
+import { Settings } from '../settings';
 
 @Component({
   selector: 'app-item-comments',
@@ -15,12 +18,16 @@ export class ItemCommentsComponent implements OnInit {
   sub: Subscription;
   item: Story;
   errorMessage: string;
+  settings: Settings;
 
   constructor(
     private _hackerNewsAPIService: HackerNewsAPIService,
+    private _settingsService: SettingsService,
     private route: ActivatedRoute,
     private _location: Location
-  ) {}
+  ) {
+    this.settings = this._settingsService.settings;
+  }
 
   ngOnInit() {
     window.scrollTo(0, 0);

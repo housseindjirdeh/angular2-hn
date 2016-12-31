@@ -88,8 +88,7 @@ h1 {
   margin-left: 20px;
 
   @media #{$mobile-only} {
-    float: right;
-    margin-right: 20px;
+    margin-left: 60px;
   }
 
   a {
@@ -110,16 +109,27 @@ h1 {
 
 .info {
   position: absolute;
+  top: 0;
   right: 20px;
-  font-size: 16px;
-  letter-spacing: 1px;
+  height: 100%;
 
   @media #{$mobile-only} {
-    display: none;
+    right: 10px;
   }
 
-  a {
-    color: #fff;
-    text-decoration: none;
+  img {
+    opacity: 0.8;
+    width: 25px;
+    margin-top: 21.5px;
+    display: block;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    @media #{$mobile-only} {
+      margin-top: 15px;
+    }
   }
 }

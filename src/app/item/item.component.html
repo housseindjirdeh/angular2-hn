@@ -1,6 +1,6 @@
 <div>
   <p *ngIf="hasUrl">
-    <a class="title" href="{{item.url}}">
+    <a class="title" href="{{item.url}}" [attr.target]="settings.openLinkInNewTab ? '_blank' : null" [attr.rel]="settings.openLinkInNewTab ? 'noopener' : null">
       {{item.title}}
     </a>
     <span *ngIf="item.domain" class="domain">({{item.domain}})</span>

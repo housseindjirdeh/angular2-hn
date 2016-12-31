@@ -4,11 +4,11 @@ import { SettingsService } from '../settings.service';
 import { Settings } from '../settings';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-settings',
+  templateUrl: './settings.component.html',
+  styleUrls: ['./settings.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class SettingsComponent implements OnInit {
   settings: Settings;
 
   constructor(private _settingsService: SettingsService) {
@@ -18,11 +18,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggleSettings() {
+  closeSettings() {
     this._settingsService.toggleSettings();
   }
 
-  scrollTop() {
-    window.scrollTo(0, 0);
+  toggleOpenLinksInNewTab() {
+    this._settingsService.toggleOpenLinksInNewTab();
   }
 }
