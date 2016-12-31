@@ -27,6 +27,22 @@
   height: 66px;
 }
 
+.white {
+  width: 32px;
+  background: #fff;
+  position: absolute;
+  left: 17px;
+  top: 18px;
+  z-index: -1;
+  height: 32px;
+  border-radius: 50%;
+
+  @media #{$mobile-only} {
+    left: 16px;
+    top: 12px;
+  }
+}
+
 .logo {
   width: 50px;
   padding: 3px 8px 0;

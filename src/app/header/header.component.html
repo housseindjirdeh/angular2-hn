@@ -1,7 +1,8 @@
 <header>
     <div id="header">
       <a class="home-link" routerLink="/news/1" routerLinkActive="active" (click)="scrollTop()">
-        <img class="logo" src="assets/images/logo-header.png" alt="Logo">
+        <div class="white"></div>
+        <img class="logo" src="assets/images/logo.svg" alt="Logo">
       </a>
       <div class="header-text">
         <div class="left">
@@ -17,7 +18,7 @@
         </div>
       </div>
       <div class="info">
-        <img class="settings" src="assets/svg/cog.svg" alt="Settings" (click)="toggleSettings()">
+        <img class="settings" src="assets/images/cog.svg" alt="Settings" (click)="toggleSettings()">
       </div>
     </div>
     <app-settings *ngIf="settings.showSettings"></app-settings>
