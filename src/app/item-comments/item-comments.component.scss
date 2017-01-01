@@ -146,3 +146,9 @@ a {
   margin-bottom: -1em;
   margin-top: 1em;
 }
+
+.pollContent .pollBar {
+    height: 10px;
+    margin-bottom: 1em;
+    background-color: $primary-red;
+}

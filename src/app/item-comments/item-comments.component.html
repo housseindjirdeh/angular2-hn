@@ -9,7 +9,7 @@
         <a *ngIf="hasUrl" class="title" href="{{item.url}}" [attr.target]="settings.openLinkInNewTab ? '_blank' : null" [attr.rel]="settings.openLinkInNewTab ? 'noopener' : null">
           {{item.title}}
         </a>
-        <a *ngIf="!hasUrl" class="title" [routerLink]="['/item', item.id]">
+        <a *ngIf="!hasUrl" class="title" [routerLink]="['/item', item.id]"
           routerLinkActive="active">
           {{item.title}}
         </a>
@@ -41,11 +41,12 @@
           </span>
         </span>
       </div>
-      <div *ngIf="item.type === 'poll'" class="pollResults">
-        <div *ngFor="let pollResult of item.poll" class="pollContent">
-          <div [innerHTML]="pollResult.content"></div>
-          <div class="subtext">{{pollResult.points}} points</div>
-        </div>
+    </div>
+    <div *ngIf="item.type === 'poll'" class="pollResults">
+      <div *ngFor="let pollResult of item.poll" class="pollContent">
+        <div [innerHTML]="pollResult.content"></div>
+        <div class="subtext">{{pollResult.points}} points</div>
+        <div class="pollBar" [ngStyle]="{'width': pollResult.points/item.poll_votes_count*100+'%'}"></div>
       </div>
     </div>
     <p class="subject" [innerHTML]="item.content"></p>

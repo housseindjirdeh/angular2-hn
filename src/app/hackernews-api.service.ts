@@ -45,9 +45,11 @@ export class HackerNewsAPIService {
     return lazyFetch(`${this.baseUrl}/item/${id}`).map( (story: Story) => {
       if (story.type === 'poll') {
         let numberOfPollOptions = story.poll.length;
+        story.poll_votes_count = 0;
         for (let i = 1; i <= numberOfPollOptions; i++) {
           this.fetchPollContent(story.id + i).subscribe(pollResults => {
             story.poll[i - 1] = pollResults;
+            story.poll_votes_count += pollResults.points;
           });
         }
       }
