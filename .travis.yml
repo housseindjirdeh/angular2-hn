@@ -15,6 +15,7 @@ script:
   - npm run sw
 
 after_success:
+  - firebase use default
   - firebase deploy --token $FIREBASE_TOKEN
 
 notifications:
