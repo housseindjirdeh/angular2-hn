@@ -15,6 +15,7 @@ export class Story {
     comments: Comment[];
     comments_count: number;
     poll: PollResult[];
+    poll_votes_count: number;
     deleted: boolean;
     dead: boolean;
 }
