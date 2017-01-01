@@ -10,7 +10,7 @@ Even if you have little to no experience with Angular, I'll be more than happy t
 3. Make a branch for your feature or bug fix
 4. If you don't have Angular CLI installed: `npm install -g angular-cli@latest`
 5. `ng init`
-6. Input `n` for each file to not overwrite any file changes
+6. Type `n` for each file to not overwrite any file changes
 7. Run `ng serve` and open `localhost:4200` in a browser
 8. Work your magic
 9. Run `ng build --prod --aot` or `ng serve --prod --aot` to kick off a production build and make sure nothing is broken
