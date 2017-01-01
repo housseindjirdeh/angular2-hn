@@ -12,10 +12,10 @@ before_script:
 
 script:
   - ng build --prod --aot
+  - npm run sw
 
 after_success:
-  - npm run sw
-  - firebase deploy --token ${FIREBASE_TOKEN}
+  - firebase deploy --token $FIREBASE_TOKEN
 
 notifications:
   email:
