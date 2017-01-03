@@ -7,6 +7,7 @@ module.exports = {
     'dist/assets/icons/*'
   ],
   stripPrefix: 'dist',
+  navigateFallback: '/index.html',
   runtimeCaching: [{
     urlPattern: /node-hnapi\.herokuapp\.com/,
     handler: 'networkFirst'
