@@ -1,9 +1,14 @@
 @import "./shared/media";
-@import "./shared/variables";
+@import "./shared/themes";
 
-#wrapper {
-  background-color: $wrapper-background-color;
-  color: $wrapper-color;
+.body-cover {
+  width: 100%;
+  z-index: 0;
+  position: fixed;
+  height: 100%;
+}
+
+.wrapper {
   position: relative;
   width: 85%;
   min-height: 80px;
@@ -15,6 +20,5 @@
 
    @media #{$mobile-only} {
     width: 100%;
-    background-color: $wrapper-background-color;
   }
 }

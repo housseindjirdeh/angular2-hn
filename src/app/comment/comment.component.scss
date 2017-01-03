@@ -1,9 +1,8 @@
 @import "../shared/media";
-@import "../shared/variables";
+@import "../shared/themes";
 
 :host >>> {
   a {
-    color: $primary-red;
     font-weight: bold;
     text-decoration: none;
     &:hover {
@@ -19,7 +18,6 @@
   letter-spacing: 0.5px;
   margin-bottom: 8px;
   a {
-    color: $primary-red;
     text-decoration: none;
 
     &:hover {
@@ -48,12 +46,10 @@
 
 .deleted-meta {
   font-size: 12px;
-  color: #696969;
   font-weight: bold;
   letter-spacing: 0.5px;
   margin: 30px 0;
   a {
-    color: $primary-red;
     text-decoration: none;
   }
 }

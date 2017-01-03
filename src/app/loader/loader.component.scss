@@ -1,14 +1,12 @@
 @import "../shared/media";
-@import "../shared/variables";
+@import "../shared/themes";
 
 .loader {
-  background: $primary-red;
   -webkit-animation: load1 1s infinite ease-in-out;
   animation: load1 1s infinite ease-in-out;
   width: 1em;
   height: 4em;
   &:before, &:after {
-    background: $primary-red;
     -webkit-animation: load1 1s infinite ease-in-out;
     animation: load1 1s infinite ease-in-out;
     width: 1em;
@@ -38,7 +36,6 @@
 }
 
 .loader {
-  color: $primary-red;
   text-indent: -9999em;
   margin: 20px 20px;
   position: relative;

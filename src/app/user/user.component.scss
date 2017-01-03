@@ -1,5 +1,5 @@
 @import "../shared/media";
-@import "../shared/variables";
+@import "../shared/themes";
 
 :host >>> pre {
   white-space: pre-wrap;
@@ -27,15 +27,12 @@
     width: 0.6rem;
     height: 0.6rem;
     background: transparent;
-    border-top: .3rem solid $primary-red;
-    border-right: .3rem solid $primary-red;
     box-shadow: 0 0 0 lightgray;
     transition: all 200ms ease;
     left: 4%;
     transform: translate3d(0, -50%, 0) rotate(-135deg);
   }
   .item-header {
-    border-bottom: 2px solid $primary-red;
     padding-bottom: 10px;
     background-color: #fff;
     padding: 10px 0 10px 0;
@@ -55,7 +52,6 @@
 
 .main-details {
   .name {
-    color: $primary-red;
     font-weight: bold;
     font-size: 32px;
     letter-spacing: 2px;
@@ -67,7 +63,6 @@
   }
   .right {
     float: right;
-    color: $primary-red;
     font-weight: bold;
     font-size: 32px;
     letter-spacing: 2px;

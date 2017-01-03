@@ -1,5 +1,5 @@
 @import "../shared/media";
-@import "../shared/variables";
+@import "../shared/themes";
 
 .overlay {
   position: fixed;
@@ -15,16 +15,18 @@
 .popup {
   margin: 70px auto;
   padding: 30px;
-  background: $primary-red;
   border-radius: 5px;
   width: 30%;
   position: relative;
-  h2 {
+  h1 {
     margin-top: 0;
     margin-bottom: 0px;
     color: #fff;
     text-align: center;
     letter-spacing: 1px;
+  }
+  h2 {
+    padding-top: 10px;
   }
   hr {
     width: 40%;
