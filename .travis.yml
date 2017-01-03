@@ -12,7 +12,7 @@ before_script:
 
 script:
   - ng build --prod --aot
-  - npm run sw
+  - npm run precache
 
 after_success:
   - firebase use default
