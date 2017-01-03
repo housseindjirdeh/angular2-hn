@@ -1,5 +1,8 @@
+@import "app/shared/variables";
+
 body {
   margin-bottom: 0;
+  background-color: $body-background-color;
 }
 
 @media only screen and (max-width : 768px) {
@@ -13,9 +16,9 @@ pre {
 }
 
 .app-loader {
-	display: flex;
-  	align-items: center;
-  	justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
     position: fixed;
     height: 100%;
@@ -57,7 +60,7 @@ app-root:empty + .app-loader .logo {
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     animation-iteration-count: 10;
-		-moz-animation-iteration-count: 10;
-		-webkit-animation-iteration-count: 10;
-		-o-animation-iteration-count: 10;
+    -moz-animation-iteration-count: 10;
+    -webkit-animation-iteration-count: 10;
+    -o-animation-iteration-count: 10;
 }

@@ -2,3 +2,30 @@ $primary-red: #b92b27;
 $wrapper-color-laptop: #f5f5f5;
 $wrapper-color-mobile: #fff;
 $skull-size: 200px;
+
+// Day theme colors
+$theme-day-body-background-color: #fff;
+$theme-day-wrapper-background-color: #f5f5f5;
+$theme-day-text-color: #000;
+$theme-day-subtext-color: $primary-red;
+
+// Night theme colors
+$theme-night-body-background-color: #37474F;
+$theme-night-wrapper-background-color: #263238;
+$theme-night-text-color: rgba(255, 255, 255, 0.8);
+$theme-night-subtext-color: $primary-red;
+
+
+//// Day theme colors set to variables
+//$body-background-color: $theme-day-body-background-color;
+//$wrapper-background-color: $theme-day-wrapper-background-color;
+//$wrapper-color: $theme-day-text-color;
+//$item-a-color: $theme-day-text-color;
+//$item-subtext-color: $theme-day-subtext-color;
+
+//// Night theme colors set to variables
+$body-background-color: $theme-night-body-background-color;
+$wrapper-background-color: $theme-night-wrapper-background-color;
+$wrapper-color: $theme-night-text-color;
+$item-a-color: $theme-night-text-color;
+$item-subtext-color: $theme-night-subtext-color;
