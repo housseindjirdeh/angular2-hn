@@ -1,8 +1,7 @@
 @import "../shared/media";
-@import "../shared/variables";
+@import "../shared/themes";
 
 #header {
-  background-color: $primary-red;
   color: #fff;
   padding: 6px 0;
   line-height: 18px;
@@ -27,9 +26,8 @@
   height: 66px;
 }
 
-.white {
+.logo-inner {
   width: 32px;
-  background: #fff;
   position: absolute;
   left: 17px;
   top: 18px;

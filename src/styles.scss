@@ -1,14 +1,14 @@
-@import "app/shared/variables";
+@import "app/shared/themes";
 
-body {
-  margin-bottom: 0;
-  background-color: $body-background-color;
+html {
+  height: 100%;
+  width: 100%;
 }
 
-@media only screen and (max-width : 768px) {
-  body {
-    margin: 0;
-  }
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
 }
 
 pre {

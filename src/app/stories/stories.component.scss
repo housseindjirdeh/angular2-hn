@@ -1,8 +1,7 @@
 @import "../shared/media";
-@import "../shared/variables";
+@import "../shared/themes";
 
 a {
-  color: $primary-red;
   text-decoration: none;
   font-weight: bold;
 
@@ -72,7 +71,6 @@ ol {
 
   a {
     @media #{$mobile-only} {
-      color: $primary-red;
       text-decoration: none;
     }
   }
@@ -106,6 +104,5 @@ ol {
 
   @media #{$mobile-only} {
     padding: 60px 15px 25px 15px;
-    border-bottom: 2px dotted $primary-red;
   }
 }

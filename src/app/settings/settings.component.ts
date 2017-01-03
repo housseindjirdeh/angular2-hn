@@ -25,4 +25,8 @@ export class SettingsComponent implements OnInit {
   toggleOpenLinksInNewTab() {
     this._settingsService.toggleOpenLinksInNewTab();
   }
+
+  selectTheme(theme) {
+    this._settingsService.setTheme(theme);
+  }
 }

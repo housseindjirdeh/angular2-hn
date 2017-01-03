@@ -1,5 +1,5 @@
 @import "../shared/media";
-@import "../shared/variables";
+@import "../shared/themes";
 
 p {
     margin: 2px 0;
@@ -11,7 +11,6 @@ p {
   }
 
   a {
-    color: $item-a-color;
     cursor: pointer;
     text-decoration: none;
   }
@@ -23,13 +22,10 @@ p {
 
   .subtext-laptop {
     font-size: 12px;
-    color: #696969;
     font-weight: bold;
     letter-spacing: 0.5px;
 
     a {
-      color: $primary-red;
-
       &:hover {
         text-decoration: underline;
       };
@@ -41,13 +37,10 @@ p {
 
   .subtext-palm {
     font-size: 13px;
-    color: #696969;
     font-weight: bold;
     letter-spacing: 0.5px;
 
     a {
-      color: $primary-red;
-
       &:hover {
         text-decoration: underline;
       };

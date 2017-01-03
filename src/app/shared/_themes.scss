@@ -1,0 +1,254 @@
+@import "./media";
+
+$skull-size: 200px;
+
+// -------------------------------------------------------------------------------------------
+// Theme Engine
+// -------------------------------------------------------------------------------------------
+
+// Day theme colors
+$theme-day-body-background-color: #fff;
+$theme-day-wrapper-background-color: #f5f5f5;
+$theme-day-wrapper-mobile-background-color: #fff;
+$theme-day-text-color: #000;
+$theme-day-subtext-color: #696969;
+$theme-day-secondary-color: #b92b27;
+$theme-day-header-background-color: $theme-day-secondary-color;
+$theme-day-logo-inner: #fff;
+
+// Day theme extras
+$theme-day-border: 2px solid #b92b27;
+
+// Night theme colors
+$theme-night-body-background-color: #37474F;
+$theme-night-wrapper-background-color: #263238;
+$theme-night-wrapper-mobile-background-color: $theme-night-wrapper-background-color;
+$theme-night-text-color: rgba(255, 255, 255, 0.7);
+$theme-night-subtext-color: #999;
+$theme-night-secondary-color: #00c0ff;
+$theme-night-header-background-color: #263238;
+$theme-night-logo-inner: $theme-night-header-background-color;
+
+// Night theme extras
+$theme-night-border: 2px solid #00c0ff;
+
+/* ----------------------------------
+
+  Want a new theme? Add your new theme variables here!
+
+---------------------------------- */
+
+@mixin theme(
+  $name,
+  $body-background-color,
+  $wrapper-background-color,
+  $wrapper-mobile-background-color,
+  $wrapper-color,
+  $item-a-color,
+  $header-background-color,
+  $subtext-color,
+  $secondary-link-color,
+  $logo-inner-color,
+  $border
+) {
+  .#{$name} {
+    .body-cover {
+      background: $body-background-color;
+
+      @media #{$mobile-only} {
+       background: $wrapper-mobile-background-color;
+      }
+    }
+
+    .wrapper {
+      background: $wrapper-background-color;
+      color: $wrapper-color;
+
+      @media #{$mobile-only} {
+       background: $wrapper-mobile-background-color;
+      }
+
+      a {
+        color: $item-a-color;
+      }
+
+      #header {
+        background: $header-background-color;
+        border-bottom: $border;
+      }
+
+      .logo-inner {
+        background: $logo-inner-color;
+      }
+
+      .nav {
+        a {
+          color: $secondary-link-color;
+
+          @media #{$mobile-only} {
+            color: $secondary-link-color;
+          }
+        }
+      }
+
+      #footer {
+        border-top: $border;
+
+        a {
+          color: $secondary-link-color;
+        }
+      }
+
+      .subtext, .subtext-palm, .subtext-laptop, .domain, .meta, .deleted-meta{
+        color: $subtext-color;
+
+        a {
+          color: $secondary-link-color;
+        }
+      }
+
+      .popup {
+        background: $header-background-color;
+      }
+
+      .item-header {
+        border-bottom: $border;
+
+        @media #{$mobile-only} {
+          background: $wrapper-mobile-background-color;
+        }
+      }
+
+      .pollContent {
+        .pollBar {
+          background: $secondary-link-color;
+        }
+      }
+
+      .loader {
+        color: $secondary-link-color;
+        background: $secondary-link-color;
+
+        &:before, &:after {
+          background: $secondary-link-color;
+        }
+      }
+
+      .job-header {
+        @media #{$mobile-only} {
+          border-bottom: $border;
+        }
+      }
+
+      .back-button {
+        @media #{$mobile-only} {
+          border-top: .3rem solid $secondary-link-color;
+          border-right: .3rem solid $secondary-link-color;
+        }
+      }
+
+      .error-section {
+        .skull {
+          .head {
+            background-color: $secondary-link-color;
+
+            &:before, &:after {
+              background-color: $wrapper-background-color;
+
+              @media #{$mobile-only} {
+                background-color: $wrapper-mobile-background-color;
+              }
+            }
+
+            .crack {
+              background-color: $wrapper-background-color;
+
+              @media #{$mobile-only} {
+                background-color: $wrapper-mobile-background-color;
+              }
+
+              &:before {
+                border-top: $skull-size / 8 solid $wrapper-background-color;
+
+                @media #{$mobile-only} {
+                  border-top: $skull-size / 8 solid $wrapper-mobile-background-color;
+                }
+              }
+            }
+          }
+
+          .mouth {
+            background-color: $secondary-link-color;
+
+            &:before {
+              background-color: $wrapper-background-color;
+
+              @media #{$mobile-only} {
+                background-color: $wrapper-mobile-background-color;
+              }
+            }
+          }
+
+          .teeth {
+            background-color: $wrapper-background-color;
+
+            @media #{$mobile-only} {
+              background-color: $wrapper-mobile-background-color;
+            }
+
+            &:before, &:after {
+              background-color: $wrapper-background-color;
+
+              @media #{$mobile-only} {
+                background-color: $wrapper-mobile-background-color;
+              }
+            }
+          }
+        }
+      }
+
+      .main-details {
+        .name {
+          color: $secondary-link-color;
+        }
+        .right {
+          color: $secondary-link-color;
+        }
+      }
+    }
+  }
+}
+
+@include theme(
+  default,
+  $theme-day-body-background-color,
+  $theme-day-wrapper-background-color,
+  $theme-day-wrapper-mobile-background-color,
+  $theme-day-text-color,
+  $theme-day-text-color,
+  $theme-day-header-background-color,
+  $theme-day-subtext-color,
+  $theme-day-secondary-color,
+  $theme-day-logo-inner,
+  $theme-day-border
+);
+
+@include theme(
+  night,
+  $theme-night-body-background-color,
+  $theme-night-wrapper-background-color,
+  $theme-night-wrapper-mobile-background-color,
+  $theme-night-text-color,
+  $theme-night-text-color,
+  $theme-night-header-background-color,
+  $theme-night-subtext-color,
+  $theme-night-secondary-color,
+  $theme-night-logo-inner,
+  $theme-night-border
+);
+
+/* ----------------------------------
+
+  Include your new theme here as well as the settings component
+
+---------------------------------- */

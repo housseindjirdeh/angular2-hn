@@ -1,16 +1,14 @@
 @import "../shared/media";
-@import "../shared/variables";
+@import "../shared/themes";
 
 #footer {
   position: relative;
   padding: 10px;
   height: 60px;
-  border-top: 2px solid $primary-red;
   letter-spacing: 0.7px;
   text-align: center;
 
   a {
-  	color: $primary-red;
   	font-weight: bold;
   	text-decoration: none;
 

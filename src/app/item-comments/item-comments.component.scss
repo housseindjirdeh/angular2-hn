@@ -1,5 +1,5 @@
 @import "../shared/media";
-@import "../shared/variables";
+@import "../shared/themes";
 
 .main-content {
   position: relative;
@@ -45,7 +45,6 @@ p {
 }
 
 a {
-  color: $item-a-color;
   cursor: pointer;
   text-decoration: none;
 }
@@ -85,8 +84,6 @@ a {
     width: 0.6rem;
     height: 0.6rem;
     background: transparent;
-    border-top: .3rem solid $primary-red;
-    border-right: .3rem solid $primary-red;
     box-shadow: 0 0 0 lightgray;
     transition: all 200ms ease;
     left: 4%;
@@ -96,22 +93,15 @@ a {
 
 .subtext {
   font-size: 12px;
-  color: #696969;
   font-weight: bold;
   letter-spacing: 0.5px;
 }
 
 .domain {
-  color: #696969;
   letter-spacing: 0.5px;
 }
 
-.domain a {
-  color: $primary-red;
-}
-
 .subtext a {
-  color: $primary-red;
   &:hover {
     text-decoration: underline;
   }
@@ -122,13 +112,11 @@ a {
 }
 
 .item-header {
-  border-bottom: 2px solid $primary-red;
   padding-bottom: 10px;
 }
 
 @media #{$mobile-only} {
   .item-header {
-    background-color: #fff;
     padding: 10px 0 10px 0;
     position: fixed;
     width: 100%;
@@ -138,17 +126,17 @@ a {
 }
 
 .pollResults {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
-.pollContent * {
-  padding-bottom: 0;
-  margin-bottom: -1em;
-  margin-top: 1em;
-}
-
-.pollContent .pollBar {
+.pollContent {
+  * {
+    padding-bottom: 0;
+    margin-bottom: -1em;
+    margin-top: 1em;
+  }
+  .pollBar {
     height: 10px;
     margin-bottom: 1em;
-    background-color: $primary-red;
+  }
 }

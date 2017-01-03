@@ -1,11 +1,38 @@
 <div id="popup1" class="overlay">
 	<div class="popup">
-		<h2>Settings</h2>
+		<h1>Settings</h1>
 		<hr>
 		<span class="close" (click)="closeSettings()">&times;</span>
 		<div class="content">
+			<h2>Links</h2>
 			<input type="checkbox" [checked]="settings.openLinkInNewTab" (change)="toggleOpenLinksInNewTab()" />
 			  Open links in a new tab
+
+				<div class="theme-controls">
+			    <h2>Select a theme</h2>
+			    <div>
+			        <label>
+			            <input #default
+												name="theme"
+												type="radio"
+												value="default"
+												[checked]="settings.theme === default.value"
+												(click)="selectTheme(default.value)" />
+			            Default
+			        </label>
+			    </div>
+			    <div>
+			        <label>
+			            <input #night
+												name="theme"
+												type="radio"
+												value="night"
+												[checked]="settings.theme === night.value"
+												(click)="selectTheme(night.value)" />
+			          	Night
+			        </label>
+			    </div>
+			</div>
 		</div>
 	</div>
 </div>
