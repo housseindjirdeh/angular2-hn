@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "angular2-hn"
+    "default": "angular2-hn",
+    "JIT": "angular2-hn-jit"
   }
 }
