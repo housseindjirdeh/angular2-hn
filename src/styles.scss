@@ -41,26 +41,3 @@ app-root:empty + .app-loader {
 app-root:empty + .app-loader .logo {
     width: 20vh;
 }
-
-@-webkit-keyframes pulse {
-    0% { -webkit-transform: scale(1); }
-    50% { -webkit-transform: scale(1.1); }
-    100% { -webkit-transform: scale(1); }
-}
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-.pulse {
-    -webkit-animation-name: pulse;
-    animation-name: pulse;
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    animation-iteration-count: 10;
-    -moz-animation-iteration-count: 10;
-    -webkit-animation-iteration-count: 10;
-    -o-animation-iteration-count: 10;
-}
