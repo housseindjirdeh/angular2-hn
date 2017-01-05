@@ -1,12 +1,13 @@
 module.exports = {
   staticFileGlobs: [
-    'dist/index.html',
+    'dist/**.html',
     'dist/**.js',
     'dist/**.css',
     'dist/assets/images/*',
     'dist/assets/icons/*'
   ],
-  stripPrefix: 'dist',
+  root: 'dist'
+  stripPrefix: 'dist/',
   navigateFallback: '/index.html',
   runtimeCaching: [{
     urlPattern: /node-hnapi\.herokuapp\.com/,
