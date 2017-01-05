@@ -11,5 +11,6 @@ module.exports = {
   runtimeCaching: [{
     urlPattern: /node-hnapi\.herokuapp\.com/,
     handler: 'networkFirst'
-  }]
+  }],
+  verbose: true
 };
