@@ -75,12 +75,12 @@ Feel free to send me feedback on [twitter](https://twitter.com/hdjirdeh) or [fil
 Click [here](https://cli.angular.io/) to see a full list of what you can do with Angular CLI.
 
 Note: Any Service Worker changes will not be reflected when you run the application locally in development. To test service worker changes:
+ - `ng build --prod --aot` to kick off a fresh build and update the `dist/` directory
+ - `npm run precache` to generate the service worker file
+ - `npm run static-serve` to load the application along with the service worker asset using [live-server](https://github.com/tapio/live-server)
 
- - `npm run sw` to generate the service worker file
- - `npm run static-serve` to load the application along with the service worker asset using [lite-server](https://github.com/johnpapa/lite-server)
- 
 ## Contributors
- 
+
 A million thanks to some awesome people :)
 
 * [Mateusz](https://github.com/mateuszwitkowski)
