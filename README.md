@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://angular2-hn.firebaseapp.com">
-    <img alt="Angular 2 HN" title="Angular 2 HN" src="http://i.imgur.com/92Lll7T.png" width="500">
+    <img alt="Angular 2 HN" title="Angular 2 HN" src="http://i.imgur.com/J303pQ4.png" width="150">
   </a>
 </p>
 
@@ -14,25 +14,25 @@
 
 <p align="center">
   <a href="/CONTRIBUTING.md"><img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"></a>
-  <a href="https://travis-ci.org/hdjirdeh/angular2-hn"><img alt="Build Status" src="https://travis-ci.org/hdjirdeh/angular2-hn.svg?branch=master"></a>
+  <a href="https://travis-ci.org/hdjirdeh/angular2-hn"><img alt="Build Status" src="https://travis-ci.org/housseindjirdeh/angular2-hn.svg?branch=master"></a>
 </p>
 
 ---
 
-**Fast:** Uses a Service Worker App Shell + dynamic content model to achieve faster load times with and without a network
+:zap: **Fast:** Uses a Service Worker App Shell + dynamic content model to achieve faster load times with and without a network
 
-**Responsive:** Completely responsive UI that can be installed to your mobile home screen to provide a native feel regardless of which device you use.
+:iphone: **Responsive:** Completely responsive UI that can be installed to your mobile home screen to provide a native feel regardless of which device you use.
 
-**Progressive:** [Lighthouse](https://github.com/GoogleChrome/lighthouse) score of 99/100.
+:rocket: **Progressive:** [Lighthouse](https://github.com/GoogleChrome/lighthouse) score of 99/100.
 
 <p align="center">
-  <img src = "http://i.imgur.com/KnAFtRl.png">
+  <img src = "http://i.imgur.com/fzJzLFO.png" width=500>
 </p>
 
 ## Mobile Preview
 
 <p align="center">
-  <img src = "http://i.imgur.com/ElUwbGY.gif">
+  <img src = "http://i.imgur.com/ZloA1hn.gif">
 </p>
 
 ## Laptop Preview
@@ -56,10 +56,20 @@ With Chromium based browsers for Android (Chrome, Opera, etc...), Angular 2 HN i
   <img src = "http://i.imgur.com/1RaaNkr.png">
 </p>
 
+## Themes
+
+Built in theme engine!
+
+Current themes:
+* Default
+* Night
+
+More to come!
+
 ## Possible areas of improvement
 
  - Realtime updating
- - Server side rendering (Angular Universal) to allow for a functional app with JS disabled
+ - Server side rendering (Angular Universal?)
 
 Feel free to send me feedback on [twitter](https://twitter.com/hdjirdeh) or [file an issue](https://github.com/hdjirdeh/angular2-hn/issues/new)! Feature requests are always welcome.
 
