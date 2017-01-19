@@ -45,6 +45,7 @@ $theme-night-border: 2px solid #00c0ff;
   $wrapper-mobile-background-color,
   $wrapper-color,
   $item-a-color,
+  $item-a-visited-color,
   $header-background-color,
   $subtext-color,
   $secondary-link-color,
@@ -70,6 +71,10 @@ $theme-night-border: 2px solid #00c0ff;
 
       a {
         color: $item-a-color;
+
+        &:visited {
+            color: $item-a-visited-color;
+        }
       }
 
       #header {
@@ -226,6 +231,7 @@ $theme-night-border: 2px solid #00c0ff;
   $theme-day-wrapper-mobile-background-color,
   $theme-day-text-color,
   $theme-day-text-color,
+  lighten($theme-day-text-color, 66%),
   $theme-day-header-background-color,
   $theme-day-subtext-color,
   $theme-day-secondary-color,
@@ -240,6 +246,7 @@ $theme-night-border: 2px solid #00c0ff;
   $theme-night-wrapper-mobile-background-color,
   $theme-night-text-color,
   $theme-night-text-color,
+  darken($theme-night-text-color, 40%),
   $theme-night-header-background-color,
   $theme-night-subtext-color,
   $theme-night-secondary-color,
