@@ -33,17 +33,17 @@ $theme-night-logo-inner: $theme-night-header-background-color;
 $theme-night-border: 2px solid #00c0ff;
 
 // Black theme colors
-$theme-black-body-background-color: #000;
-$theme-black-wrapper-background-color: $theme-black-body-background-color;
-$theme-black-wrapper-mobile-background-color: $theme-black-body-background-color;
-$theme-black-text-color: rgba(255, 255, 255, 0.75);
-$theme-black-subtext-color: rgba(255, 255, 255, 0.5);
-$theme-black-secondary-color: rgba(255, 255, 255, 0.6);
-$theme-black-header-background-color: $theme-black-body-background-color;
-$theme-black-logo-inner: $theme-black-header-background-color;
+$theme-amoledblack-body-background-color: #000;
+$theme-amoledblack-wrapper-background-color: $theme-amoledblack-body-background-color;
+$theme-amoledblack-wrapper-mobile-background-color: $theme-amoledblack-body-background-color;
+$theme-amoledblack-text-color: rgba(255, 255, 255, 0.75);
+$theme-amoledblack-subtext-color: rgba(255, 255, 255, 0.5);
+$theme-amoledblack-secondary-color: rgba(255, 255, 255, 0.6);
+$theme-amoledblack-header-background-color: $theme-amoledblack-body-background-color;
+$theme-amoledblack-logo-inner: $theme-amoledblack-header-background-color;
 
 // Black theme extras
-$theme-black-border: $theme-black-secondary-color;
+$theme-amoledblack-border: $theme-amoledblack-secondary-color;
 
 /* ----------------------------------
 
@@ -261,17 +261,17 @@ $theme-black-border: $theme-black-secondary-color;
 );
 
 @include theme(
-  black,
-  $theme-black-body-background-color,
-  $theme-black-wrapper-background-color,
-  $theme-black-wrapper-mobile-background-color,
-  $theme-black-text-color,
-  $theme-black-text-color,
-  $theme-black-header-background-color,
-  $theme-black-subtext-color,
-  $theme-black-secondary-color,
-  $theme-black-logo-inner,
-  $theme-black-border
+  amoledblack,
+  $theme-amoledblack-body-background-color,
+  $theme-amoledblack-wrapper-background-color,
+  $theme-amoledblack-wrapper-mobile-background-color,
+  $theme-amoledblack-text-color,
+  $theme-amoledblack-text-color,
+  $theme-amoledblack-header-background-color,
+  $theme-amoledblack-subtext-color,
+  $theme-amoledblack-secondary-color,
+  $theme-amoledblack-logo-inner,
+  $theme-amoledblack-border
 );
 
 /* ----------------------------------
