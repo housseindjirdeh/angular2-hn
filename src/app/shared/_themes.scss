@@ -32,6 +32,19 @@ $theme-night-logo-inner: $theme-night-header-background-color;
 // Night theme extras
 $theme-night-border: 2px solid #00c0ff;
 
+// Black theme colors
+$theme-black-body-background-color: #000;
+$theme-black-wrapper-background-color: $theme-black-body-background-color;
+$theme-black-wrapper-mobile-background-color: $theme-black-body-background-color;
+$theme-black-text-color: rgba(255, 255, 255, 0.75);
+$theme-black-subtext-color: rgba(255, 255, 255, 0.5);
+$theme-black-secondary-color: rgba(255, 255, 255, 0.6);
+$theme-black-header-background-color: $theme-black-body-background-color;
+$theme-black-logo-inner: $theme-black-header-background-color;
+
+// Black theme extras
+$theme-black-border: $theme-black-secondary-color;
+
 /* ----------------------------------
 
   Want a new theme? Add your new theme variables here!
@@ -245,6 +258,20 @@ $theme-night-border: 2px solid #00c0ff;
   $theme-night-secondary-color,
   $theme-night-logo-inner,
   $theme-night-border
+);
+
+@include theme(
+  black,
+  $theme-black-body-background-color,
+  $theme-black-wrapper-background-color,
+  $theme-black-wrapper-mobile-background-color,
+  $theme-black-text-color,
+  $theme-black-text-color,
+  $theme-black-header-background-color,
+  $theme-black-subtext-color,
+  $theme-black-secondary-color,
+  $theme-black-logo-inner,
+  $theme-black-border
 );
 
 /* ----------------------------------
