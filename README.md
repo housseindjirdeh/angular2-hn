@@ -63,6 +63,7 @@ Built in theme engine!
 Current themes:
 * Default
 * Night
+* Black (AMOLED)
 
 More to come!
 

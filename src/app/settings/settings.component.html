@@ -9,29 +9,40 @@
 			  Open links in a new tab
 
 				<div class="theme-controls">
-			    <h2>Select a theme</h2>
-			    <div>
-			        <label>
-			            <input #default
+				<h2>Select a theme</h2>
+				<div>
+					<label>
+						<input #default
 												name="theme"
 												type="radio"
 												value="default"
 												[checked]="settings.theme === default.value"
 												(click)="selectTheme(default.value)" />
-			            Default
-			        </label>
-			    </div>
-			    <div>
-			        <label>
-			            <input #night
+						Default
+					</label>
+				</div>
+				<div>
+					<label>
+						<input #night
 												name="theme"
 												type="radio"
 												value="night"
 												[checked]="settings.theme === night.value"
 												(click)="selectTheme(night.value)" />
-			          	Night
-			        </label>
-			    </div>
+						Night
+					</label>
+				</div>
+				<div>
+					<label>
+						<input #amoledblack
+												name="theme"
+												type="radio"
+												value="amoledblack"
+												[checked]="settings.theme === amoledblack.value"
+												(click)="selectTheme(amoledblack.value)" />
+						Black (AMOLED)
+					</label>
+				</div>
 			</div>
 		</div>
 	</div>
