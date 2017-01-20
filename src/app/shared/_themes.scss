@@ -32,6 +32,12 @@ $theme-night-logo-inner: $theme-night-header-background-color;
 // Night theme extras
 $theme-night-border: 2px solid #00c0ff;
 
+// Black theme colors
+$theme-amoledblack-body-background-color: #000;
+$theme-amoledblack-text-color: rgba(255, 255, 255, 0.75);
+$theme-amoledblack-subtext-color: rgba(255, 255, 255, 0.5);
+$theme-amoledblack-secondary-color: rgba(255, 255, 255, 0.6);
+
 /* ----------------------------------
 
   Want a new theme? Add your new theme variables here!
@@ -252,6 +258,20 @@ $theme-night-border: 2px solid #00c0ff;
   $theme-night-secondary-color,
   $theme-night-logo-inner,
   $theme-night-border
+);
+
+@include theme(
+  amoledblack,
+  $theme-amoledblack-body-background-color,
+  $theme-amoledblack-body-background-color,
+  $theme-amoledblack-body-background-color,
+  $theme-amoledblack-text-color,
+  $theme-amoledblack-text-color,
+  $theme-amoledblack-body-background-color,
+  $theme-amoledblack-subtext-color,
+  $theme-amoledblack-secondary-color,
+  $theme-amoledblack-body-background-color,
+  $theme-amoledblack-secondary-color
 );
 
 /* ----------------------------------
