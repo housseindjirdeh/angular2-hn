@@ -267,6 +267,7 @@ $theme-amoledblack-secondary-color: rgba(255, 255, 255, 0.6);
   $theme-amoledblack-body-background-color,
   $theme-amoledblack-text-color,
   $theme-amoledblack-text-color,
+  darken($theme-amoledblack-text-color, 33%),
   $theme-amoledblack-body-background-color,
   $theme-amoledblack-subtext-color,
   $theme-amoledblack-secondary-color,
