@@ -3,8 +3,8 @@ import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { ActivatedRoute } from '@angular/router';
 
-import { HackerNewsAPIService } from '../hackernews-api.service';
-import { Story } from '../story';
+import { HackerNewsAPIService } from '../shared/services/hackernews-api.service';
+import { Story } from '../shared/models/story';
 
 @Component({
   selector: 'app-stories',

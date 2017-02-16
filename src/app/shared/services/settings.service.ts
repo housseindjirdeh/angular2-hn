@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Settings } from './settings';
+import { Settings } from '../models/settings';
 
 @Injectable()
 export class SettingsService {

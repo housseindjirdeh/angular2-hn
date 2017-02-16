@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { SettingsService } from '../settings.service';
-import { Settings } from '../settings';
+import { SettingsService } from '../shared/services/services.module';
+import { Settings } from '../shared/models/settings';
 
 @Component({
   selector: 'app-header',
