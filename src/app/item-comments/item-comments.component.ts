@@ -3,11 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Subscription } from 'rxjs/Subscription';
 
-import { HackerNewsAPIService } from '../hackernews-api.service';
-import { SettingsService } from '../settings.service';
+import { HackerNewsAPIService } from '../shared/services/services.module';
+import { SettingsService } from '../shared/services/services.module';
 
-import { Story } from '../story';
-import { Settings } from '../settings';
+import { Story } from '../shared/models/story';
+import { Settings } from '../shared/models/settings';
 
 @Component({
   selector: 'app-item-comments',
