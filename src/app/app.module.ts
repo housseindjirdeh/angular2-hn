@@ -6,7 +6,7 @@ import { routing } from './app.routes';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 
-import { ItemCommentsModule } from './item-comments/item-comments.module';
+import { ItemDetailsModule } from './item-details/item-details.module';
 import { ServicesModule } from './shared/services/services.module';
 import { PipesModule } from './shared/pipes/pipes.module';
 import { SharedComponentsModule } from './shared/components/shared-components.module';
@@ -22,7 +22,7 @@ import { CoreModule } from './core/core.module';
     BrowserModule,
     routing,
     ServicesModule.forRoot(),
-    ItemCommentsModule,
+    ItemDetailsModule,
     PipesModule,
     SharedComponentsModule,
     FeedsModule,

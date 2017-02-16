@@ -19,9 +19,9 @@
 
 ---
 
-:zap: **Fast:** Uses a Service Worker App Shell + dynamic content model to achieve faster load times with and without a network
+:zap: **Fast:** Service Worker App Shell + Dynamic Content model to achieve faster load times with and without a network.
 
-:iphone: **Responsive:** Completely responsive UI that can be installed to your mobile home screen to provide a native feel regardless of which device you use.
+:iphone: **Responsive:** Completely responsive UI that can be installed to your mobile home screen to provide a native feel.
 
 :rocket: **Progressive:** [Lighthouse](https://github.com/GoogleChrome/lighthouse) score of 99/100.
 
