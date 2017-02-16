@@ -30,7 +30,7 @@ export class ItemDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    window.scrollTo(0, 0);
+    //window.scrollTo(0, 0);
 
     this.sub = this.route.params.subscribe(params => {
       let itemID = +params['id'];
