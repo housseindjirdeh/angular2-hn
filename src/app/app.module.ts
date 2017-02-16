@@ -4,29 +4,29 @@ import { NgModule } from '@angular/core';
 import { routing } from './app.routes';
 
 import { AppComponent } from './app.component';
-import { UserComponent } from './user/user.component';
 
+import { CoreModule } from './core/core.module';
 import { ItemDetailsModule } from './item-details/item-details.module';
 import { ServicesModule } from './shared/services/services.module';
 import { PipesModule } from './shared/pipes/pipes.module';
 import { SharedComponentsModule } from './shared/components/shared-components.module';
 import { FeedsModule } from './feeds/feeds.module';
-import { CoreModule } from './core/core.module';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    UserComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     routing,
     ServicesModule.forRoot(),
+    CoreModule,
     ItemDetailsModule,
     PipesModule,
     SharedComponentsModule,
     FeedsModule,
-    CoreModule
+    UserModule
   ],
   providers: [ ],
   bootstrap: [AppComponent]
