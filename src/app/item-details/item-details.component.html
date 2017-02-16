@@ -50,6 +50,10 @@
       </div>
     </div>
     <p class="subject" [innerHTML]="item.content"></p>
-    <app-comment-tree [commentTree]="item.comments"></app-comment-tree>
+    <ul class="comment-list">
+      <li *ngFor="let comment of item.comments" >
+        <app-comment [comment]="comment"></app-comment>
+      </li>
+    </ul>
   </div>
 </div>

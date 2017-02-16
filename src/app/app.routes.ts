@@ -2,7 +2,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { FeedComponent } from './feeds/feed/feed.component';
-import { ItemCommentsComponent } from './item-comments/item-comments.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
 import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'show/:page', component: FeedComponent, data: {feedType: 'show'}},
   {path: 'ask/:page', component: FeedComponent, data: {feedType: 'ask'}},
   {path: 'jobs/:page', component: FeedComponent, data: {feedType: 'jobs'}},
-  {path: 'item/:id', component: ItemCommentsComponent},
+  {path: 'item/:id', component: ItemDetailsComponent},
   {path: 'user/:id', component: UserComponent}
 ];
 

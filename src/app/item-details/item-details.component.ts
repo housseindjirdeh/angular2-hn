@@ -10,11 +10,11 @@ import { Story } from '../shared/models/story';
 import { Settings } from '../shared/models/settings';
 
 @Component({
-  selector: 'app-item-comments',
-  templateUrl: './item-comments.component.html',
-  styleUrls: ['./item-comments.component.scss']
+  selector: 'app-item-details',
+  templateUrl: './item-details.component.html',
+  styleUrls: ['./item-details.component.scss']
 })
-export class ItemCommentsComponent implements OnInit {
+export class ItemDetailsComponent implements OnInit {
   sub: Subscription;
   item: Story;
   errorMessage: string;
