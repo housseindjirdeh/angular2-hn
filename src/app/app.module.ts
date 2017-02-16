@@ -6,7 +6,6 @@ import { routing } from './app.routes';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { ServicesModule } from './shared/services/services.module';
-import { FeedsModule } from './feeds/feeds.module';
 
 @NgModule({
   declarations: [
@@ -16,8 +15,7 @@ import { FeedsModule } from './feeds/feeds.module';
     BrowserModule,
     routing,
     ServicesModule.forRoot(),
-    CoreModule,
-    FeedsModule
+    CoreModule
   ],
   providers: [ ],
   bootstrap: [AppComponent]
