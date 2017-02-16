@@ -3,32 +3,13 @@ import { Observable } from 'rxjs/Observable';
 import 'isomorphic-fetch';
 import 'rxjs/add/operator/map';
 
-import { Story } from './story';
-import { User } from './user';
-import { PollResult } from './poll-result';
+import { Story } from '../models/story';
+import { User } from '../models/user';
+import { PollResult } from '../models/poll-result';
 
 declare var fetch;
 
 // wrap fetch in observable so we can keep it chill
-function lazyFetch(url, options?) {
-  return new Observable(fetchObserver => {
-    let cancelToken = false;
-    fetch(url, options)
-      .then(res => {
-        if (!cancelToken) {
-          return res.json()
-            .then(data => {
-              fetchObserver.next(data);
-              fetchObserver.complete();
-            });
-        }
-      }).catch(err => fetchObserver.error(err));
-      return () => {
-        cancelToken = true;
-      };
-  });
-}
-
 @Injectable()
 export class HackerNewsAPIService {
   baseUrl: string;
@@ -65,3 +46,23 @@ export class HackerNewsAPIService {
     return lazyFetch(`${this.baseUrl}/user/${id}`);
   }
 }
+
+function lazyFetch(url, options?) {
+  return new Observable(fetchObserver => {
+    let cancelToken = false;
+    fetch(url, options)
+      .then(res => {
+        if (!cancelToken) {
+          return res.json()
+            .then(data => {
+              fetchObserver.next(data);
+              fetchObserver.complete();
+            });
+        }
+      }).catch(err => fetchObserver.error(err));
+      return () => {
+        cancelToken = true;
+      };
+  });
+}
+

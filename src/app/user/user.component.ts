@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Subscription } from 'rxjs/Subscription';
 
-import { HackerNewsAPIService } from '../hackernews-api.service';
-import { User } from '../user';
+import { HackerNewsAPIService } from '../shared/services/services.module';
+import { User } from '../shared/models/user';
 
 @Component({
   selector: 'app-user',
