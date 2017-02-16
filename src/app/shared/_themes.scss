@@ -51,6 +51,7 @@ $theme-amoledblack-secondary-color: rgba(255, 255, 255, 0.6);
   $wrapper-mobile-background-color,
   $wrapper-color,
   $item-a-color,
+  $item-a-visited-color,
   $header-background-color,
   $subtext-color,
   $secondary-link-color,
@@ -76,6 +77,10 @@ $theme-amoledblack-secondary-color: rgba(255, 255, 255, 0.6);
 
       a {
         color: $item-a-color;
+
+        &:visited {
+            color: $item-a-visited-color;
+        }
       }
 
       #header {
@@ -232,6 +237,7 @@ $theme-amoledblack-secondary-color: rgba(255, 255, 255, 0.6);
   $theme-day-wrapper-mobile-background-color,
   $theme-day-text-color,
   $theme-day-text-color,
+  $theme-day-subtext-color,
   $theme-day-header-background-color,
   $theme-day-subtext-color,
   $theme-day-secondary-color,
@@ -246,6 +252,7 @@ $theme-amoledblack-secondary-color: rgba(255, 255, 255, 0.6);
   $theme-night-wrapper-mobile-background-color,
   $theme-night-text-color,
   $theme-night-text-color,
+  $theme-night-subtext-color,
   $theme-night-header-background-color,
   $theme-night-subtext-color,
   $theme-night-secondary-color,
@@ -260,6 +267,7 @@ $theme-amoledblack-secondary-color: rgba(255, 255, 255, 0.6);
   $theme-amoledblack-body-background-color,
   $theme-amoledblack-text-color,
   $theme-amoledblack-text-color,
+  darken($theme-amoledblack-text-color, 33%),
   $theme-amoledblack-body-background-color,
   $theme-amoledblack-subtext-color,
   $theme-amoledblack-secondary-color,
