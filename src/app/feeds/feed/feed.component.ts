@@ -35,7 +35,7 @@ export class FeedComponent implements OnInit {
 
     this.pageSub = this.route.params.subscribe(params => {
       this.pageNum = params['page'] ? +params['page'] : 1;
-      this._hackerNewsAPIService.fetchStories(this.feedType, this.pageNum)
+      this._hackerNewsAPIService.fetchFeed(this.feedType, this.pageNum)
         .subscribe(
           items => this.items = items,
           error => this.errorMessage = 'Could not load ' + this.feedType + ' stories.',
