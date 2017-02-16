@@ -1,22 +1,22 @@
 <div class="main-content">
   <app-loader *ngIf="!items && !errorMessage"></app-loader>
   <app-error-message [message]="errorMessage" *ngIf="!items && errorMessage"></app-error-message>
-  
+
   <div *ngIf="items">
-    <p class="job-header" *ngIf="storiesType === 'jobs'">
+    <p class="job-header" *ngIf="feedType === 'jobs'">
       These are jobs at startups that were funded by Y Combinator.
       You can also get a job at a YC startup through <a href="https://triplebyte.com/?ref=yc_jobs">Triplebyte</a>.
     </p>
-    <ol *ngIf="storiesType !== 'new'" [class.list-margin]="storiesType !== 'jobs'" start="{{ listStart }}">
+    <ol *ngIf="feedType !== 'new'" [class.list-margin]="feedType !== 'jobs'" start="{{ listStart }}">
       <li *ngFor="let item of items" class="post">
         <item class="item-block" [item]="item"></item>
       </li>
     </ol>
     <div class="nav">
-      <a *ngIf="listStart !== 1" [routerLink]="['/' + storiesType, pageNum - 1]" routerLinkActive="active" class="prev">
+      <a *ngIf="listStart !== 1" [routerLink]="['/' + feedType, pageNum - 1]" routerLinkActive="active" class="prev">
         ‹ Prev
       </a>
-      <a *ngIf="items.length === 30" [routerLink]="['/' + storiesType, pageNum + 1]" routerLinkActive="active" class="more">
+      <a *ngIf="items.length === 30" [routerLink]="['/' + feedType, pageNum + 1]" routerLinkActive="active" class="more">
         More ›
       </a>
     </div>
