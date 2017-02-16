@@ -8,15 +8,14 @@ import { HeaderComponent } from './header/header.component';
 import { StoriesComponent } from './stories/stories.component';
 import { FooterComponent } from './footer/footer.component';
 import { ItemComponent } from './item/item.component';
-
-import { ServicesModule } from './shared/services/services.module';
 import { UserComponent } from './user/user.component';
-import { ItemCommentsComponent } from './item-comments/item-comments.component';
-import { CommentTreeComponent } from './comment-tree/comment-tree.component';
-import { CommentComponent } from './comment/comment.component';
+import { SettingsComponent } from './settings/settings.component';
+
+import { ItemCommentsModule } from './item-comments/item-comments.module';
+import { ServicesModule } from './shared/services/services.module';
 import { PipesModule } from './shared/pipes/pipes.module';
 import { SharedComponentsModule } from './shared/components/shared-components.module';
-import { SettingsComponent } from './settings/settings.component';
+
 
 @NgModule({
   declarations: [
@@ -26,15 +25,13 @@ import { SettingsComponent } from './settings/settings.component';
     FooterComponent,
     ItemComponent,
     UserComponent,
-    ItemCommentsComponent,
-    CommentTreeComponent,
-    CommentComponent,
     SettingsComponent
   ],
   imports: [
     BrowserModule,
     routing,
     ServicesModule.forRoot(),
+    ItemCommentsModule,
     PipesModule,
     SharedComponentsModule
   ],
