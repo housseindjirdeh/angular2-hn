@@ -1,5 +1,5 @@
 import { Comment } from './comment';
-import { StoryType } from './story-type.type';
+import { FeedType } from './feed-type.type';
 import { PollResult } from './poll-result';
 
 export class Story {
@@ -9,7 +9,7 @@ export class Story {
     user: string;
     time: number;
     time_ago: number;
-    type: StoryType;
+    type: FeedType;
     url: string;
     domain: string;
     comments: Comment[];

@@ -18,8 +18,8 @@ export class HackerNewsAPIService {
     this.baseUrl = 'https://node-hnapi.herokuapp.com';
   }
 
-  fetchStories(storyType: string, page: number): Observable<Story[]> {
-    return lazyFetch(`${this.baseUrl}/${storyType}?page=${page}`);
+  fetchFeed(feedType: string, page: number): Observable<Story[]> {
+    return lazyFetch(`${this.baseUrl}/${feedType}?page=${page}`);
   }
 
   fetchItemContent(id: number): Observable<Story> {

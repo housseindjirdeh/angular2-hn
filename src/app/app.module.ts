@@ -5,9 +5,7 @@ import { routing } from './app.routes';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { StoriesComponent } from './stories/stories.component';
 import { FooterComponent } from './footer/footer.component';
-import { ItemComponent } from './item/item.component';
 import { UserComponent } from './user/user.component';
 import { SettingsComponent } from './settings/settings.component';
 
@@ -15,15 +13,13 @@ import { ItemCommentsModule } from './item-comments/item-comments.module';
 import { ServicesModule } from './shared/services/services.module';
 import { PipesModule } from './shared/pipes/pipes.module';
 import { SharedComponentsModule } from './shared/components/shared-components.module';
-
+import { FeedsModule } from './feeds/feeds.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    StoriesComponent,
     FooterComponent,
-    ItemComponent,
     UserComponent,
     SettingsComponent
   ],
@@ -33,7 +29,8 @@ import { SharedComponentsModule } from './shared/components/shared-components.mo
     ServicesModule.forRoot(),
     ItemCommentsModule,
     PipesModule,
-    SharedComponentsModule
+    SharedComponentsModule,
+    FeedsModule
   ],
   providers: [ ],
   bootstrap: [AppComponent]
