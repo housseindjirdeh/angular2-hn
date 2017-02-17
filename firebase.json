@@ -19,24 +19,6 @@
             "value": "</main.68152ef471d57276a524.bundle.js>;rel=preload;as=script,</vendor.c261d5f0ab3974357739.bundle.js>;rel=preload;as=script,</inline.4be3349cfd7c15348595.bundle.js>;rel=preload;as=script,</1.a0eeeedfab0560b35f30.chunk.js>;rel=preload;as=script,</styles.64434f48b8ba97487ac2.bundle.css>;rel=preload;as=style"
           }
         ]
-      },
-      {
-        "source": "/item/*",
-        "headers": [
-          {
-            "key": "Link",
-            "value": "</0.e0be8984fe1bfa748310.chunk.js>;rel=preload;as=script"
-          }
-        ]
-      },
-      {
-        "source": "/user/*",
-        "headers": [
-          {
-            "key": "Link",
-            "value": "</2.c91676e95a3acaa57df3.chunk.js>;rel=preload;as=script"
-          }
-        ]
       }
     ]
   }
