@@ -9,6 +9,12 @@
         "source": "**",
         "destination": "/index.html"
       }
+    ],
+    "headers": [
+      {
+        "source": "/",
+        "headers": [{"key": "Link", "value": "</*main*.js>;rel=preload;as=script"}]
+      }
     ]
   }
 }
