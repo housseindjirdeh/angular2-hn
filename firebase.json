@@ -13,7 +13,7 @@
     "headers": [
       {
         "source": "/",
-        "headers": [{"key": "Link", "value": "</main.js>;rel=preload;as=script}]
+        "headers": [{"key": "Link", "value": "</main.68152ef471d57276a524.bundle.js>"}]
       }
     ]
   }
