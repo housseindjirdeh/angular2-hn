@@ -10,32 +10,33 @@
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor",
     "precache": "sw-precache --verbose --config=sw-precache-config.js",
-    "static-serve": "cd dist && live-server --port=4200 --host=localhost --entry-file=/index.html"
+    "static-serve": "cd dist && live-server --port=4200 --host=localhost --entry-file=/index.html",
+    "bundle-report": "webpack-bundle-analyzer dist/stats.json"
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "^2.3.1",
-    "@angular/compiler": "^2.3.1",
-    "@angular/core": "^2.3.1",
-    "@angular/forms": "^2.3.1",
-    "@angular/http": "^2.3.1",
-    "@angular/platform-browser": "^2.3.1",
-    "@angular/platform-browser-dynamic": "^2.3.1",
-    "@angular/router": "^3.3.1",
+    "@angular/common": "^4.0.0-rc.2",
+    "@angular/compiler": "^4.0.0-rc.2",
+    "@angular/core": "^4.0.0-rc.2",
+    "@angular/forms": "^4.0.0-rc.2",
+    "@angular/http": "^4.0.0-rc.2",
+    "@angular/platform-browser": "^4.0.0-rc.2",
+    "@angular/platform-browser-dynamic": "^4.0.0-rc.2",
+    "@angular/router": "^4.0.0-rc.2",
     "@types/isomorphic-fetch": "0.0.31",
     "core-js": "^2.4.1",
     "es6-promise": "^4.0.5",
     "isomorphic-fetch": "^2.2.1",
-    "rxjs": "^5.0.1",
+    "rxjs": "^5.1.0",
     "ts-helpers": "^1.1.1",
-    "zone.js": "^0.7.2"
+    "zone.js": "^0.7.6"
   },
   "devDependencies": {
     "@angular/cli": "^1.0.0-rc.0",
-    "@angular/compiler-cli": "^2.3.1",
+    "@angular/compiler-cli": "^4.0.0-rc.2",
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",
-    "codelyzer": "~2.0.0-beta.1",
+    "codelyzer": "~2.0.0",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "2.5.0",
     "karma": "1.2.0",
@@ -45,8 +46,9 @@
     "karma-remap-istanbul": "^0.2.1",
     "protractor": "~4.0.13",
     "sw-precache": "^4.2.3",
-    "ts-node": "1.2.1",
-    "tslint": "^4.0.2",
-    "typescript": "~2.0.3"
+    "ts-node": "~2.1.0",
+    "tslint": "~4.5.1",
+    "typescript": "~2.2.1",
+    "webpack-bundle-analyzer": "^2.3.0"
   }
 }

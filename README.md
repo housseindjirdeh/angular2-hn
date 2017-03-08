@@ -23,7 +23,7 @@
 
 :iphone: **Responsive:** Completely responsive UI that can be installed to your mobile home screen to provide a native feel.
 
-:rocket: **Progressive:** [Lighthouse](https://github.com/GoogleChrome/lighthouse) score of 99/100.
+:rocket: **Progressive:** [Lighthouse](https://github.com/GoogleChrome/lighthouse) score of 100/100.
 
 <p align="center">
   <img src = "http://i.imgur.com/fzJzLFO.png" width=500>
