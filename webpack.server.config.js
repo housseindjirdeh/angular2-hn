@@ -4,12 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const postcssUrl = require('postcss-url');
-const webpack = require('webpack');
+
 const { NoEmitOnErrorsPlugin, LoaderOptionsPlugin } = require('webpack');
 const { GlobCopyWebpackPlugin, BaseHrefWebpackPlugin } = require('@angular/cli/plugins/webpack');
 const { CommonsChunkPlugin } = require('webpack').optimize;
 const { AotPlugin } = require('@ngtools/webpack');
-const webpackUglifyJsPlugin = require('webpack-uglify-js-plugin');
 
 const nodeModules = path.join(process.cwd(), 'node_modules');
 const entryPoints = ["inline","polyfills","sw-register","styles","vendor","main"];
@@ -30,6 +29,7 @@ module.exports = {
       "./node_modules"
     ]
   },
+  target: 'node',
   "resolveLoader": {
     "modules": [
       "./node_modules"
@@ -45,8 +45,8 @@ module.exports = {
   },
   "output": {
     "path": path.join(process.cwd(), "dist"),
-    "filename": "[name].bundle.js",
-    "chunkFilename": "[id].chunk.js"
+    "filename": "[name].server.bundle.js",
+    "chunkFilename": "[id].server.chunk.js"
   },
   "module": {
     "rules": [
@@ -271,25 +271,13 @@ module.exports = {
       }
     }),
     new AotPlugin({
-      "mainPath": "main.ts",
+      "entryModule": __dirname + "/src/app/app.server.module#AppServerModule",
       "hostReplacementPaths": {
-        "environments/environment.ts": "environments/environment.ts"
+        "environments\\environment.ts": "environments\\environment.ts"
       },
       "exclude": [],
-      "tsConfigPath": "src/tsconfig.json",
-      "skipCodeGeneration": true
+      "tsConfigPath": "src/tsconfig.server.json",
+      "skipCodeGeneration": false
     }),
-    new webpack.optimize.UglifyJsPlugin()
   ],
-  "node": {
-    "fs": "empty",
-    "global": true,
-    "crypto": "empty",
-    "tls": "empty",
-    "net": "empty",
-    "process": true,
-    "module": false,
-    "clearImmediate": false,
-    "setImmediate": false
-  }
 };

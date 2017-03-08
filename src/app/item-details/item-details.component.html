@@ -1,6 +1,6 @@
 <div class="main-content">
   <app-loader *ngIf="!item && !errorMessage"></app-loader>
-  <app-error-message [message]="errorMessage" *ngIf="!item && errorMessage"></app-error-message>
+  <app-error-message [message]="errorMessage" *ngIf="!item && errorMessage !== ''"></app-error-message>
 
   <div *ngIf="item" class="item">
     <div class="mobile item-header">

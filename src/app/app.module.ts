@@ -12,7 +12,9 @@ import { ServicesModule } from './shared/services/services.module';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({
+        appId: 'angular2-hn'
+    }),
     routing,
     ServicesModule.forRoot(),
     CoreModule

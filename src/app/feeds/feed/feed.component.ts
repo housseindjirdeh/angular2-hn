@@ -16,10 +16,10 @@ export class FeedComponent implements OnInit {
   typeSub: Subscription;
   pageSub: Subscription;
   items: Story[];
-  feedType;
+  feedType: string;
   pageNum: number;
   listStart: number;
-  errorMessage: string;
+  errorMessage = '';
 
   constructor(
     private _hackerNewsAPIService: HackerNewsAPIService,
