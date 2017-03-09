@@ -37,10 +37,7 @@ module.exports = {
   },
   "entry": {
     "main": [
-      "./src/main.ts"
-    ],
-    "styles": [
-      "./src/styles.scss"
+      "./src/main.server.ts"
     ]
   },
   "output": {
@@ -271,12 +268,12 @@ module.exports = {
       }
     }),
     new AotPlugin({
-      "entryModule": __dirname + "/src/app/app.server.module#AppServerModule",
+      "entryModule": __dirname + "/src/app/app.server.module.ts#AppServerModule",
       "hostReplacementPaths": {
         "environments\\environment.ts": "environments\\environment.ts"
       },
       "exclude": [],
-      "tsConfigPath": "src/tsconfig.server.json",
+      "tsConfigPath": "./tsconfig.server.json",
       "skipCodeGeneration": false
     }),
   ],

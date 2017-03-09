@@ -271,15 +271,19 @@ module.exports = {
       }
     }),
     new AotPlugin({
-      "mainPath": "main.ts",
-      "hostReplacementPaths": {
-        "environments/environment.ts": "environments/environment.ts"
-      },
-      "exclude": [],
-      "tsConfigPath": "src/tsconfig.json",
-      "skipCodeGeneration": true
-    }),
-    new webpack.optimize.UglifyJsPlugin()
+  	  "mainPath": "src/main.ts",
+  	  "hostReplacementPaths": {
+  	    "environments\\environment.ts": "environments\\environment.ts"
+  	  },
+  	  "exclude": [],
+  	  "tsConfigPath": "tsconfig.json",
+
+  	  // Set flag to false to allow AOT
+  	  "skipCodeGeneration": false
+  	}),
+
+  	// Add UgilyJsPlugin
+  	new webpack.optimize.UglifyJsPlugin()
   ],
   "node": {
     "fs": "empty",
