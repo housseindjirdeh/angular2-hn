@@ -1,5 +1,5 @@
 <app-loader *ngIf="!user && !errorMessage"></app-loader>
-<app-error-message [message]="errorMessage" *ngIf="!user && errorMessage"></app-error-message>
+<app-error-message [message]="errorMessage" *ngIf="!user && errorMessage !== ''"></app-error-message>
 
 <div *ngIf="user" class="profile">
   <div class="mobile item-header">

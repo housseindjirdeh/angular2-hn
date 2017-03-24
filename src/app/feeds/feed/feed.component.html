@@ -1,6 +1,6 @@
 <div class="main-content">
   <app-loader *ngIf="!items && !errorMessage"></app-loader>
-  <app-error-message [message]="errorMessage" *ngIf="!items && errorMessage"></app-error-message>
+  <app-error-message [message]="errorMessage" *ngIf="!items && errorMessage !==''"></app-error-message>
 
   <div *ngIf="items">
     <p class="job-header" *ngIf="feedType === 'jobs'">
