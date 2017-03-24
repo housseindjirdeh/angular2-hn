@@ -17,7 +17,7 @@ import { Settings } from '../shared/models/settings';
 export class ItemDetailsComponent implements OnInit {
   sub: Subscription;
   item: Story;
-  errorMessage: string;
+  errorMessage = '';
   settings: Settings;
 
   constructor(
@@ -30,8 +30,6 @@ export class ItemDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    //window.scrollTo(0, 0);
-
     this.sub = this.route.params.subscribe(params => {
       let itemID = +params['id'];
       this._hackerNewsAPIService.fetchItemContent(itemID).subscribe(item => {
