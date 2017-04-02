@@ -94,6 +94,7 @@ Note: Any Service Worker changes will not be reflected when you run the applicat
 
 A million thanks to some awesome people :)
 
+* [Ashwin Sureshkumar](https://github.com/ashwin-sureshkumar)
 * [Mateusz](https://github.com/mateuszwitkowski)
 * [Jordi Collell](https://github.com/jordic)
 * [Ben Brooks](https://github.com/bbrks)
