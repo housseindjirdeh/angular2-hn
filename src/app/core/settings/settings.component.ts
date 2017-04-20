@@ -31,12 +31,10 @@ export class SettingsComponent implements OnInit {
   }
 
   changeTitleFont(val){
-    console.log(val);
     this._settingsService.setFont(val);
   }
 
   changeSpacing(val){
-    console.log(val);
     this._settingsService.setSpacing(val);
   }
 }
