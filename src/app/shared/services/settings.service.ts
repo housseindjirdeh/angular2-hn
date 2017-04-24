@@ -7,7 +7,9 @@ export class SettingsService {
   settings: Settings = {
     showSettings : false,
     openLinkInNewTab: localStorage.getItem("openLinkInNewTab") ? JSON.parse(localStorage.getItem("openLinkInNewTab")) : false,
-    theme: localStorage.getItem("theme") ? localStorage.getItem("theme") : 'default'
+    theme: localStorage.getItem("theme") ? localStorage.getItem("theme") : 'default',
+    titleFontSize: localStorage.getItem("titleFontSize") ? localStorage.getItem("titleFontSize") : '16',
+    listSpacing: localStorage.getItem("listSpacing") ? localStorage.getItem("listSpacing") : '0',
   };
 
   constructor() { }
@@ -24,5 +26,15 @@ export class SettingsService {
   setTheme(theme) {
     this.settings.theme = theme;
     localStorage.setItem("theme", this.settings.theme);
+  }
+
+  setFont(fontSize){
+    this.settings.titleFontSize = fontSize;
+    localStorage.setItem("titleFontSize", this.settings.titleFontSize);
+  }
+
+  setSpacing(listSpace){
+    this.settings.listSpacing = listSpace;
+    localStorage.setItem("listSpacing", this.settings.listSpacing);
   }
 }

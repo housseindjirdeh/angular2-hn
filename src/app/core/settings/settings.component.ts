@@ -29,4 +29,12 @@ export class SettingsComponent implements OnInit {
   selectTheme(theme) {
     this._settingsService.setTheme(theme);
   }
+
+  changeTitleFont(val){
+    this._settingsService.setFont(val);
+  }
+
+  changeSpacing(val){
+    this._settingsService.setSpacing(val);
+  }
 }

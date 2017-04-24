@@ -43,6 +43,29 @@
 						Black (AMOLED)
 					</label>
 				</div>
+          <h2>Change Font</h2>
+          <div>
+            <label>
+              Font size:
+              <input #titleFont
+                     min="1"
+                     [value]="settings.titleFontSize"
+                     name="theme"
+                     type="number"
+                     (keyup)="changeTitleFont(titleFont.value)" />
+            </label>
+          </div>
+          <div>
+            <label>
+              List spacing:
+              <input #listSpacing
+                     min="0"
+                     [value]="settings.listSpacing"
+                     name="theme"
+                     type="number"
+                     (keyup)="changeSpacing(listSpacing.value)" />
+            </label>
+          </div>
 			</div>
 		</div>
 	</div>
