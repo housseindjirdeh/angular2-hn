@@ -36,6 +36,7 @@ export class ItemDetailsComponent implements OnInit {
         this.item = item;
       }, error => this.errorMessage = 'Could not load item comments.');
     });
+    window.scrollTo(0, 0);
   }
 
   goBack() {
