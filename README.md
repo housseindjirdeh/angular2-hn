@@ -67,26 +67,23 @@ Current themes:
 
 More to come!
 
-## Possible areas of improvement
+## Areas of improvement
 
- - Realtime updating
- - Server side rendering (Angular Universal?)
+ - Realtime updating using the Firebase SDK (may need to add option to settings so service worker can still rely on REST endpoints)
+ - Server side rendering
 
 Feel free to send me feedback on [twitter](https://twitter.com/hdjirdeh) or [file an issue](https://github.com/hdjirdeh/angular2-hn/issues/new)! Feature requests are always welcome.
 
 ## Build process
 
- - Clone or download the repo
- - If you don't have Angular CLI installed: `npm install -g angular-cli@latest`
- - `ng init`
- - Input `n` for each file to not overwrite any file changes
- - `ng serve` will kick off the server at `http://localhost:4200/`. Any changes you do to the source files should automatically reload the app
- - `ng serve --prod --aot` will kick off a production build with uglifying, tree-shaking and Ahead-of-Time compilation
+Note: This project has been ejected (with AOT + production settings) in order to customize Webpack configurations.
 
-Click [here](https://cli.angular.io/) to see a full list of what you can do with Angular CLI.
+ - Clone or download the repo
+ - `npm install`
+ - `npm start` to run the application with webpack-dev-server or `npm build` to kick off a fresh build and update the output directory (`dist/`)
 
 Note: Any Service Worker changes will not be reflected when you run the application locally in development. To test service worker changes:
- - `ng build --prod --aot` to kick off a fresh build and update the `dist/` directory
+ - `npm build`
  - `npm run precache` to generate the service worker file
  - `npm run static-serve` to load the application along with the service worker asset using [live-server](https://github.com/tapio/live-server)
 
@@ -102,3 +99,4 @@ A million thanks to some awesome people :)
 * [blAck PR](https://github.com/blackpr)
 * [Bram Borggreve](https://github.com/beeman)
 * [Antonio Indrianjafy](https://github.com/Antogin)
+* [Addy Osmani](https://github.com/addyosmani)
