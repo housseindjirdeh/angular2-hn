@@ -7,8 +7,6 @@ import { Story } from '../models/story';
 import { User } from '../models/user';
 import { PollResult } from '../models/poll-result';
 
-declare var fetch;
-
 // wrap fetch in observable so we can keep it chill
 @Injectable()
 export class HackerNewsAPIService {
