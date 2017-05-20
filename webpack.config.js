@@ -196,7 +196,7 @@ module.exports = {
         "manifest.json"
       ],
       "globOptions": {
-        "cwd": "/Users/houssein/Dev/angular2-hn/src",
+        "cwd": "./src",
         "dot": true,
         "ignore": "**/.gitkeep"
       }
