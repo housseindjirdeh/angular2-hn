@@ -2,6 +2,7 @@ const path = require('path');
 const ProgressPlugin = require('webpack/lib/ProgressPlugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const postcssUrl = require('postcss-url');
@@ -196,7 +197,7 @@ module.exports = {
         "manifest.json"
       ],
       "globOptions": {
-        "cwd": "/Users/houssein/Dev/angular2-hn/src",
+        "cwd": "./src",
         "dot": true,
         "ignore": "**/.gitkeep"
       }
@@ -307,6 +308,7 @@ module.exports = {
       },
       "sourceMap": false
     }),
+    new StyleExtHtmlWebpackPlugin(),
     new AotPlugin({
       "mainPath": "main.ts",
       "hostReplacementPaths": {
