@@ -1,0 +1,37 @@
+$skull-size: 200px;
+
+// -------------------------------------------------------------------------------------------
+// Theme Engine
+// -------------------------------------------------------------------------------------------
+
+// Day theme colors
+$theme-day-body-background-color: #fff;
+$theme-day-wrapper-background-color: #f5f5f5;
+$theme-day-wrapper-mobile-background-color: #fff;
+$theme-day-text-color: #000;
+$theme-day-subtext-color: #696969;
+$theme-day-secondary-color: #b92b27;
+$theme-day-header-background-color: $theme-day-secondary-color;
+$theme-day-logo-inner: #fff;
+
+// Day theme extras
+$theme-day-border: 2px solid #b92b27;
+
+// Night theme colors
+$theme-night-body-background-color: #37474F;
+$theme-night-wrapper-background-color: #263238;
+$theme-night-wrapper-mobile-background-color: $theme-night-wrapper-background-color;
+$theme-night-text-color: rgba(255, 255, 255, 0.7);
+$theme-night-subtext-color: #999;
+$theme-night-secondary-color: #00c0ff;
+$theme-night-header-background-color: #263238;
+$theme-night-logo-inner: $theme-night-header-background-color;
+
+// Night theme extras
+$theme-night-border: 2px solid #00c0ff;
+
+// Black theme colors
+$theme-amoledblack-body-background-color: #000;
+$theme-amoledblack-text-color: rgba(255, 255, 255, 0.75);
+$theme-amoledblack-subtext-color: rgba(255, 255, 255, 0.5);
+$theme-amoledblack-secondary-color: rgba(255, 255, 255, 0.6);
