@@ -1,8 +1,10 @@
 const path = require('path');
 const ProgressPlugin = require('webpack/lib/ProgressPlugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const postcssUrl = require('postcss-url');
@@ -14,7 +16,7 @@ const { CommonsChunkPlugin, UglifyJsPlugin } = require('webpack').optimize;
 const { AotPlugin } = require('@ngtools/webpack');
 
 const nodeModules = path.join(process.cwd(), 'node_modules');
-const entryPoints = ["inline","polyfills","sw-register","styles","vendor","main"];
+const entryPoints = ["inline","sw-register","styles","main"];
 const baseHref = "";
 const deployUrl = "";
 
@@ -206,6 +208,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       "template": "./src/index.html",
       "filename": "./index.html",
+      inlineSource: 'inline.*.(js)$',
       "hash": false,
       "inject": true,
       "compile": true,
@@ -230,23 +233,17 @@ module.exports = {
             return 0;
         }
     }
-    }),
+  }),
+
     new PreloadWebpackPlugin({
       rel: 'preload',
       as: 'script',
-      include: ['inline', 'vendor', 'main']
+      include: ['main']
     }),
     new BaseHrefWebpackPlugin({}),
     new CommonsChunkPlugin({
       "name": "inline",
       "minChunks": null
-    }),
-    new CommonsChunkPlugin({
-      "name": "vendor",
-      "minChunks": (module) => module.resource && module.resource.startsWith(nodeModules),
-      "chunks": [
-        "main"
-      ]
     }),
     new ExtractTextPlugin({
       "filename": "[name].[contenthash:20].bundle.css",
@@ -290,6 +287,10 @@ module.exports = {
       }
     }),
     new SuppressExtractedTextChunksWebpackPlugin(),
+    new HtmlWebpackInlineSourcePlugin(),
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: 'async'
+    }),
     new DefinePlugin({
       "process.env.NODE_ENV": "\"production\""
     }),
