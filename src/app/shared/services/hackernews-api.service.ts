@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import 'isomorphic-fetch';
+import 'unfetch';
 import 'rxjs/add/operator/map';
 
 import { Story } from '../models/story';
