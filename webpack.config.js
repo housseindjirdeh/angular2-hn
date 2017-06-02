@@ -15,7 +15,7 @@ const { CommonsChunkPlugin, UglifyJsPlugin } = require('webpack').optimize;
 const { AotPlugin } = require('@ngtools/webpack');
 
 const nodeModules = path.join(process.cwd(), 'node_modules');
-const entryPoints = ["inline","sw-register","styles","vendor","main"];
+const entryPoints = ["inline","sw-register","styles","main"];
 const baseHref = "";
 const deployUrl = "";
 
@@ -237,19 +237,12 @@ module.exports = {
     new PreloadWebpackPlugin({
       rel: 'preload',
       as: 'script',
-      include: ['vendor', 'main']
+      include: ['main']
     }),
     new BaseHrefWebpackPlugin({}),
     new CommonsChunkPlugin({
       "name": "inline",
       "minChunks": null
-    }),
-    new CommonsChunkPlugin({
-      "name": "vendor",
-      "minChunks": (module) => module.resource && module.resource.startsWith(nodeModules),
-      "chunks": [
-        "main"
-      ]
     }),
     new ExtractTextPlugin({
       "filename": "[name].[contenthash:20].bundle.css",
