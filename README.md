@@ -43,10 +43,7 @@
 
 ## Offline Support
 
-This app uses a Service Worker to load quickly and work offline.
-
-* [`sw-precache`](https://github.com/GoogleChrome/sw-precache) is used to serve local static resources (App Shell) cache first.
-* [`sw-toolbox`](https://github.com/GoogleChrome/sw-toolbox) is used to handle requests using the `networkFirst` strategy. If a request fails, the app will fulfill the request from the cache. This means previously loaded pages will now work offline.
+This app uses [Workbox](https://workboxjs.org/) to generate a service worker as part of the build step to load quickly and work offline.
 
 ## Manifest
 

@@ -1,13 +1,8 @@
 module.exports = {
-  staticFileGlobs: [
-    'dist/**.html',
-    'dist/**.js',
-    'dist/**.css',
-    'dist/assets/images/*',
-    'dist/assets/icons/*'
-  ],
-  root: 'dist',
-  stripPrefix: 'dist/',
+  globDirectory: 'dist/',
+  globPatterns: ['**/*.{js,png,svg,html,json}'],
+  swDest: 'dist/service-worker.js',
+  globIgnores: ['**/service-worker.js'],
   navigateFallback: '/index.html',
   runtimeCaching: [
     {

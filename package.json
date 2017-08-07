@@ -7,10 +7,9 @@
     "start": "webpack-dev-server --port=4200",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "karma start ./karma.conf.js",
-    "precache": "sw-precache --verbose --config=sw-precache-config.js",
     "static-serve": "cd dist && live-server --port=4200 --host=localhost --entry-file=/index.html",
     "bundle-report": "webpack-bundle-analyzer dist/stats.json",
-    "build": "rimraf dist && NODE_ENV=production webpack",
+    "build": "rimraf dist && NODE_ENV=production webpack && workbox-cli generate:sw",
     "prepree2e": "npm start",
     "pree2e": "webdriver-manager update --standalone false --gecko false --quiet",
     "e2e": "protractor ./protractor.conf.js"
@@ -69,14 +68,14 @@
     "style-ext-html-webpack-plugin": "^3.4.1",
     "style-loader": "^0.13.1",
     "stylus-loader": "^2.4.0",
-    "sw-precache": "^4.2.3",
     "ts-node": "~2.1.0",
     "tslint": "~4.5.1",
     "typescript": "~2.3.2",
     "url-loader": "^0.5.7",
     "webpack": "^3.0.0",
     "webpack-bundle-analyzer": "^2.8.2",
-    "webpack-dev-server": "~2.4.5"
+    "webpack-dev-server": "~2.4.5",
+    "workbox-cli": "^1.2.0"
   },
   "browserslist": [
     "last 2 versions",
