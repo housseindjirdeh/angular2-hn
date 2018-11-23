@@ -51,6 +51,20 @@
     letter-spacing: 1px;
     overflow: auto;
   }
+  input[type=number] {
+      display: block;
+      width: 80%;
+      height: 20px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      padding: 2px;
+  }
+}
+
+.control-section {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid white;
 }
 
 @media screen and (max-width: 700px) {
