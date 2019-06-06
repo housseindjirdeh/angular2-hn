@@ -36,8 +36,8 @@ const routes: Routes = [
     children: feedRoutes,
     data: {feedType: 'jobs'}
   },
-  {path: 'item', loadChildren: 'app/item-details/item-details.module#ItemDetailsModule'},
-  {path: 'user', loadChildren: 'app/user/user.module#UserModule'}
+  {path: 'item', loadChildren: './item-details/item-details.module#ItemDetailsModule'},
+  {path: 'user', loadChildren: './user/user.module#UserModule'}
 ];
 
 

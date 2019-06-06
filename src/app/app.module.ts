@@ -6,10 +6,12 @@ import { routing } from './app.routes';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { ServicesModule } from './shared/services/services.module';
-import { FeedComponent } from "app/feeds/feed/feed.component";
-import { ItemComponent } from "app/feeds/item/item.component";
-import { SharedComponentsModule } from "app/shared/components/shared-components.module";
-import { PipesModule } from "app/shared/pipes/pipes.module";
+import { FeedComponent } from "./feeds/feed/feed.component";
+import { ItemComponent } from "./feeds/item/item.component";
+import { SharedComponentsModule } from "./shared/components/shared-components.module";
+import { PipesModule } from "./shared/pipes/pipes.module";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -23,9 +25,11 @@ import { PipesModule } from "app/shared/pipes/pipes.module";
     ServicesModule.forRoot(),
     CoreModule,
     SharedComponentsModule,
-    PipesModule
+    PipesModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
