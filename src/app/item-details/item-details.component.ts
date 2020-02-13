@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Subscription } from 'rxjs/Subscription';
 
-import { HackerNewsAPIService } from '../shared/services/services.module';
-import { SettingsService } from '../shared/services/services.module';
+import { HackerNewsAPIService } from '../shared/services/hackernews-api.service';
+import { SettingsService } from '../shared/services/settings.service';
 
 import { Story } from '../shared/models/story';
 import { Settings } from '../shared/models/settings';

@@ -1,8 +1,6 @@
-import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { FeedComponent } from './feeds/feed/feed.component';
-import { UserComponent } from './user/user.component';
 
 const feedRoutes = [{
   path: ':page',
@@ -36,10 +34,10 @@ const routes: Routes = [
     children: feedRoutes,
     data: {feedType: 'jobs'}
   },
-  {path: 'item', loadChildren: './item-details/item-details.module#ItemDetailsModule'},
-  {path: 'user', loadChildren: './user/user.module#UserModule'}
+  {path: 'item', loadChildren: () => import('./item-details/item-details.module').then(m => m.ItemDetailsModule)},
+  {path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule)}
 ];
 
 
 // - Updated Export
-export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
+export const routing = RouterModule.forRoot(routes);
