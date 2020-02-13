@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Story } from '../../shared/models/story';
 
-import { SettingsService } from '../../shared/services/services.module';
+import { SettingsService } from '../../shared/services/settings.service';
 import { Settings } from '../../shared/models/settings';
 
 @Component({

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import fetch from 'unfetch';
-import 'rxjs/add/operator/map';
+import {map } from 'rxjs/operators';
 
 import { Story } from '../models/story';
 import { User } from '../models/user';
@@ -21,7 +21,7 @@ export class HackerNewsAPIService {
   }
 
   fetchItemContent(id: number): Observable<Story> {
-    return lazyFetch(`${this.baseUrl}/item/${id}`).map((story: Story) => {
+    return lazyFetch(`${this.baseUrl}/item/${id}`).pipe(map((story: Story) => {
       if (story.type === 'poll') {
         let numberOfPollOptions = story.poll.length;
         story.poll_votes_count = 0;
@@ -33,7 +33,7 @@ export class HackerNewsAPIService {
         }
       }
       return story;
-    });
+    }));
   }
 
   fetchPollContent(id: number): Observable<PollResult> {
@@ -45,8 +45,8 @@ export class HackerNewsAPIService {
   }
 }
 
-function lazyFetch(url, options?) {
-  return new Observable(fetchObserver => {
+function lazyFetch<T>(url, options?) {
+  return new Observable<T>(fetchObserver => {
     let cancelToken = false;
     fetch(url, options)
       .then(res => {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { SettingsService } from '../../shared/services/services.module';
+import { SettingsService } from '../../shared/services/settings.service';
 import { Settings } from '../../shared/models/settings';
 
 @Component({
