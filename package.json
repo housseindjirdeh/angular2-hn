@@ -20,7 +20,7 @@
     "@angular/platform-browser-dynamic": "~9.0.1",
     "@angular/router": "~9.0.1",
     "@angular/service-worker": "~9.0.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "rxjs": "~6.5.4",
     "rxjs-compat": "^6.5.2",
     "tslib": "^1.10.0",
